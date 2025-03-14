@@ -1,0 +1,166 @@
+@include ipad-landscape {
+    .qodef-page-header{
+        display: none;
+    }
+
+    .qodef-mobile-header {
+        display: block;
+    }
+
+	.qodef-header-vertical {
+		.qodef-vertical-menu-area {
+			display: none;
+		}
+		.qodef-content,
+		footer {
+			padding-left: 0;
+		}
+	}
+
+	.qodef-header-vertical .carousel-inner {
+		left: 0 !important;
+		width: 100%;
+	}
+}
+
+.qodef-drop-down .wide .second > .inner > ul {
+    @include laptop-landscape {
+        width: $grid-width-laptop-landscape;
+    }
+
+    @include ipad-landscape {
+        width: $grid-width-ipad-landscape;
+    }
+
+}
+
+.qodef-boxed{
+	.qodef-page-header .qodef-sticky-header,
+	.qodef-page-header .qodef-fixed-wrapper.fixed{
+		@include laptop-landscape {
+			width: $grid-width-laptop-landscape-boxed;
+		}
+	}
+
+	&.qodef-sticky-up-mobile-header .mobile-header-appear .qodef-mobile-header-inner{
+		@include ipad-landscape {
+			width: $grid-width-ipad-landscape-boxed;
+			left: auto;
+		}
+
+		@include ipad-portrait {
+			width: $grid-width-ipad-portrait-boxed;
+		}
+
+		@include phone-landscape {
+			width: $grid-width-phone-landscape-boxed;
+		}
+
+		@include phone-portrait {
+			width: $grid-width-phone-portrait-boxed;
+		}
+
+		@include smaller-phone-portrait {
+			width: $grid-width-smaller-phone-portrait-boxed;
+		}
+	}
+}
+
+.qodef-top-bar {
+
+    @include laptop-landscape {
+      .qodef-position-left {
+        .widget {
+          margin-left: 20px;
+          &:first-child {
+            margin-left: 0;
+          }
+        }
+      }
+	  .qodef-position-right {
+		  .qodef-top-bar-widget:first-child {
+			  border: none;
+			  padding-right: 0;
+		  }
+	  }
+    }
+	@include ipad-landscape {
+      .qodef-position-left {
+        .widget {
+          padding: 0 10px;
+          margin: 0;
+          font-size: 12px;
+          &:last-child {
+            display: none;
+          }
+        }
+      }
+
+      .qodef-position-right {
+        .widget {
+          padding: 0 10px;
+          &:last-child {
+            display: none;
+          }
+        }
+      }
+
+
+		.qodef-vertical-align-containers {
+			padding: 0 121px;
+		}
+	}
+	@include ipad-portrait {
+		.qodef-position-left .widget:nth-child(2) {
+			display: none;
+		}
+		.qodef-position-left .widget:first-child {
+			border-right: 0;
+		}
+		.qodef-vertical-align-containers {
+			padding: 0 77px;
+		}
+	}
+	@include phone-landscape {
+		height: auto;
+		.qodef-vertical-align-containers.qodef-50-50 .qodef-position-left,
+		.qodef-vertical-align-containers.qodef-50-50 .qodef-position-right,
+        .qodef-vertical-align-containers.qodef-75-25 .qodef-position-left,
+        .qodef-vertical-align-containers.qodef-75-25 .qodef-position-right,
+        .qodef-vertical-align-containers.qodef-25-75 .qodef-position-left,
+        .qodef-vertical-align-containers.qodef-25-75 .qodef-position-right{
+			float: none;
+			width: 100%;
+			text-align: center;
+		}
+		.widget {
+			border-right: 0;
+		}
+
+        .qodef-vertical-align-containers.qodef-75-25 .qodef-position-left {
+           display: none;
+        }
+
+		.qodef-position-left-inner,
+		.qodef-position-right-inner {
+			line-height: 30px;
+		}
+	}
+}
+
+.qodef-header-vertical {
+	@media only screen and (max-width: $laptop-landscape-large) {
+		.qodef-logo-wrapper {
+			height: 10%;
+		}
+		.qodef-vertical-area-widget-holder {
+			height: 20%;
+		}
+	}
+}
+
+@include ipad-landscape {
+  .qodef-top-bar {
+    padding: 0;
+  }
+}

@@ -1,0 +1,182 @@
+/* ==========================================================================
+# Pricing table style - begin
+========================================================================== */
+
+.qodef-pricing-tables {
+
+    &.qodef-two-columns .qodef-price-table {
+        width: 48.5%;
+    }
+
+    &.qodef-three-columns .qodef-price-table {
+        width: 31.33%;
+    }
+
+    &.qodef-four-columns .qodef-price-table {
+        width: 22%;
+    }
+
+    .qodef-price-table {
+        position: relative;
+        width: 100%;
+        padding: 0;
+        margin-left: 3%;
+        float: left;
+        @include  qodefBoxShadow();
+        border-top-style: solid;
+        border-top-width: 3px;
+        @include qodefBorderGradient($first-main-color, $second-main-color);
+
+        &:before {
+            content:'';
+            position: absolute;
+            top:-3px;
+            left:0;
+            height: 0;
+            width: 100%;
+            border-bottom: 3px solid $first-main-color;
+            opacity: 0;
+            @include qodefTransition(all .4s);
+        }
+
+        &:hover {
+            &:before {
+                opacity: 1;
+            }
+        }
+
+        &:first-child {
+            margin-left: 0;
+        }
+
+        .qodef-price-table-inner {
+            position: relative;
+            background-color: #fff;
+            @include qodefBorderRadius(0 0 3px 3px);
+
+            ul {
+                list-style: none outside none;
+                margin: 0;
+            }
+
+            ul li {
+                text-align: center;
+                margin: 0;
+            }
+
+            ul li.qodef-table-title {
+                padding: 28px 20px;
+                position: relative;
+
+                .qodef-title-content {
+                    display: block;
+                    color: #444;
+                    font-size: 12px;
+                    line-height: 20px;
+                    font-weight: 600;
+                    letter-spacing: 0.5px;
+                }
+            }
+
+            ul li.qodef-table-prices {
+                border-bottom: 1px solid #ededed;
+                border-top: 1px solid #ededed;
+                padding: 23px 5px;
+                .qodef-price-in-table {
+                    text-align: center;
+                    .qodef-value-price-holder {
+                        display: block;
+                        .qodef-value {
+                            font-size: 31px;
+                            line-height: 22px;
+                            position: relative;
+                            color: #707070;
+                            vertical-align: top;
+                            font-weight: 100;
+                            bottom: -29px;
+                            left: -20px;
+                        }
+                        .qodef-price {
+                            font-size: 50px;
+                            line-height: 68px;
+                            vertical-align: middle;
+                            color: #000000;
+                            font-weight: 200;
+                            position: relative;
+                            left: -14px;
+                          font-family: 'Raleway' , sans-serif;
+                        }
+                    }
+                }
+
+                .qodef-mark {
+                    position: relative;
+                    font-size: 11px;
+                    line-height: 18px;
+                    vertical-align: bottom;
+                    font-weight: 400;
+                    color: #707070;
+                    letter-spacing: 1px;
+                    left: -1px;
+                    top: -10px;
+                }
+            }
+
+            ul li.qodef-table-content {
+                padding-top: 32px;
+                ul {
+                    padding: 0;
+                    li {
+                        padding: 9px 20px 0;
+                    }
+                }
+            }
+
+            ul li.qodef-price-button {
+                padding: 26px 0 47px;
+
+                .qodef-btn.qodef-btn-small {
+                    padding: 4px 49px;
+                }
+            }
+        }
+
+        &.qodef-active {
+            .qodef-active-text {
+                position: absolute;
+                right: 26px;
+                top: 32px;
+                z-index: 20;
+                background: #e3e3e3;
+
+                span {
+                    display: block;
+                    width: 57px;
+                    height: 57px;
+                    background: #e3e3e3;
+                    @include qodefTransform(rotate(11.25deg));
+                }
+
+                .qodef-active-text-inner {
+                    padding: 16px 0 0;
+                    @include qodefBoxSizing(border-box);
+                    font-size: 20px;
+                    font-weight: 800;
+                    color: #444;
+                    text-align: center;
+                    text-transform: uppercase;
+                    display: inline-block;
+                    width: 57px;
+                    height: 57px;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+            }
+        }
+    }
+
+}
+/* ==========================================================================
+# Pricing table style - end
+========================================================================== */

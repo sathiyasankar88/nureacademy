@@ -1,0 +1,302 @@
+/* ==========================================================================
+# Woocommerce Product List Main and VC Shortcode responsive style - begin
+========================================================================== */
+
+@media only screen and (max-width: $laptop-landscape-large) {
+    
+    .woocommerce {
+
+        $product_list_vc_columns: ('columns-6');
+
+        @for $i from 0 to length($product_list_vc_columns) { 
+            &.#{nth($product_list_vc_columns,$i+1)} {
+                $column_vc_width: 100%/5;
+
+                > .products { 
+
+                    > .product {
+                        width: $column_vc_width;
+
+                        @media only screen and (min-width: $laptop-landscape-plus-pixel) {
+
+                            &:nth-child(5n+1) {
+                                clear: both;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: $laptop-landscape) {
+
+    .woocommerce {
+
+        $product_list_vc_columns: ('columns-5', 'columns-6');
+
+        @for $i from 0 to length($product_list_vc_columns) { 
+            &.#{nth($product_list_vc_columns,$i+1)} {
+                $column_vc_width: 100%/4;
+
+                > .products { 
+
+                    > .product {
+                        width: $column_vc_width;
+
+                        @media only screen and (min-width: $ipad-landscape-plus-pixel) {
+
+                            &:nth-child(4n+1) {
+                                clear: both;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .products{
+            li .qodef-product-holder{
+                .qodef-pl-text-wrapper{
+                    .qodef-show-details-button,
+                    .add_to_cart_button {
+                        font-size: 11px;
+                        span{
+                            font-size: 11px;
+                        }
+                        &:before{
+                            font-size: 11px;
+                        }
+                    }
+                    .add_to_cart_button{
+                        padding-left: 25px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: $ipad-landscape) {
+
+    .qodef-pl-main-holder,
+    .related.products,
+    .upsells.products,
+    .cross-sells {
+
+        $product_list_columns: ('columns-3', 'columns-4');
+
+        @for $i from 0 to length($product_list_columns) {            
+
+            > .products { 
+
+                > .product {
+
+                    .qodef-woocommerce-#{nth($product_list_columns,$i+1)} & {
+                        $column_width: 100%/3;
+                        width: $column_width;
+
+                        @media only screen and (min-width: $ipad-portrait-plus-pixel) {
+
+                            &:nth-child(3n+1) {
+                                clear: both;
+                            }
+                        }
+                    }          
+                }
+            }
+        }
+    }
+
+    .woocommerce {
+
+        $product_list_vc_columns: ('columns-4', 'columns-5', 'columns-6');
+
+        @for $i from 0 to length($product_list_vc_columns) { 
+            &.#{nth($product_list_vc_columns,$i+1)} {
+                $column_vc_width: 100%/3;
+
+                > .products { 
+
+                    > .product {
+                        width: $column_vc_width;
+
+                        @media only screen and (min-width: $ipad-portrait-plus-pixel) {
+
+                            &:nth-child(3n+1) {
+                                clear: both;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .products{
+            li .qodef-product-holder{
+                .qodef-pl-text-wrapper{
+                    .qodef-show-details-button,
+                    .add_to_cart_button {
+                        font-size: 11px;
+                        padding: 0;
+                        text-align: center;
+                        span{
+                            display: none;
+                        }
+                        &:before{
+                            display: none;
+                        }
+                    }
+                    .add_to_cart_button{
+                        padding: 0;
+                        text-align: center;
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: $ipad-portrait) {
+
+    .qodef-pl-main-holder,
+    .related.products,
+    .upsells.products,
+    .cross-sells {
+
+        $product_list_columns: ('columns-3', 'columns-4');
+
+        @for $i from 0 to length($product_list_columns) {            
+
+            > .products { 
+
+                > .product {
+
+                    .qodef-woocommerce-#{nth($product_list_columns,$i+1)} & {
+                        width: 50%;
+
+                        @media only screen and (min-width: $phone-landscape-plus-pixel) {
+
+                            &:nth-child(2n+1) {
+                                clear: both;
+                            }
+                        }
+                    }          
+                }
+            }
+        }
+    }
+
+    .woocommerce {
+
+        $product_list_vc_columns: ('columns-3', 'columns-4', 'columns-5', 'columns-6');
+
+        @for $i from 0 to length($product_list_vc_columns) { 
+            &.#{nth($product_list_vc_columns,$i+1)} {
+
+                > .products { 
+
+                    > .product {
+                        width: 50%;
+
+                        @media only screen and (min-width: $phone-landscape-plus-pixel) {
+
+                            &:nth-child(2n+1) {
+                                clear: both;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .products{
+            li .qodef-product-holder{
+                .qodef-pl-text-wrapper{
+                    .qodef-show-details-button,
+                    .add_to_cart_button {
+                        font-size: 12px;
+                        span{
+                            display: inline-block;
+                            font-size: 18px;
+                        }
+                        &:before{
+                            display: inline-block;
+                            font-size: 18px;
+                        }
+                    }
+                    .qodef-show-details-button{
+                        padding-left: 15px;
+                    }
+                    .add_to_cart_button{
+                        padding-left: 35px;
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: $phone-landscape) {
+
+    .qodef-pl-main-holder,
+    .related.products,
+    .upsells.products,
+    .cross-sells {
+
+        $product_list_columns: ('columns-3', 'columns-4');
+
+        @for $i from 0 to length($product_list_columns) {            
+
+            > .products { 
+
+                > .product {
+
+                    .qodef-woocommerce-#{nth($product_list_columns,$i+1)} & {                    
+                        width: 100%;
+                    }          
+                }
+            }
+        }
+    }
+
+    .woocommerce {
+
+        $product_list_vc_columns: ('columns-2', 'columns-3', 'columns-4', 'columns-5', 'columns-6');
+
+        @for $i from 0 to length($product_list_vc_columns) { 
+            &.#{nth($product_list_vc_columns,$i+1)} {
+
+                > .products { 
+
+                    > .product {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include phone-portrait {
+    .woocommerce {
+        .products{
+            li .qodef-product-holder{
+                .qodef-pl-text-wrapper{
+                    .qodef-show-details-button{
+                        padding: 0;
+                    }
+                    .add_to_cart_button{
+                        padding-left: 10px;
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+# Woocommerce Product List Main and VC Shortcode responsive style - end
+========================================================================== */

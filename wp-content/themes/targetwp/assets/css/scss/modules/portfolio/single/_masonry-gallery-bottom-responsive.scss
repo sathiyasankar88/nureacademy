@@ -1,0 +1,37 @@
+
+@media only screen and (max-width: $ipad-portrait) {
+
+    .qodef-portfolio-single-holder.masonry-gallery-bottom {
+        .qodef-portfolio-content{
+            margin-bottom: 20px;
+        }
+    }
+}
+
+@media only screen and (max-width: $phone-landscape) {
+
+    .qodef-portfolio-single-holder.masonry-gallery-bottom {
+
+        .qodef-portfolio-content{
+            margin-bottom:30px;
+        }
+
+        .qodef-portfolio-media {
+
+            margin-bottom:20px;
+
+            .qodef-portfolio-single-media {
+                width: 100%;
+
+                &.large{
+                    width:100%;
+                }
+            }
+
+            .qodef-single-masonry-grid-sizer {
+                width: 100%;
+            }
+
+        }
+    }
+}

@@ -1,0 +1,75 @@
+
+/* ==========================================================================
+   Progress bar shortcode start styles
+   ========================================================================== */
+.qodef-progress-bar{
+    position: relative;
+    margin: 0 0 25px;
+    width: 100%;
+    overflow: hidden;
+    text-align: left;
+    padding-right: 24px;
+    
+    .qodef-progress-title-holder{
+        position: relative;
+        margin: 0 0 4px;
+        
+        .qodef-progress-title{
+            display: inline-block;
+            z-index: 100;
+            font-size: 12px;
+        }
+    }    
+    .qodef-progress-number-wrapper  {
+        text-align: right;
+        position: absolute;
+        left: 0;
+        z-index: 10;
+        opacity: 0;
+        bottom: 0;
+        width: 100%;
+        margin-left: 0;
+        
+        .qodef-progress-number {
+            font-size: 15px;
+            font-weight: 700;
+            color: #444;
+            display: inline-block;
+            text-align: center;
+            float: right;
+        }
+        .qodef-progress-number .qodef-percent:after{
+            content: '%';
+            margin-left: 0.1em;
+            font-size: 1em;
+        }
+        
+    }
+    
+    .qodef-progress-content-outer{
+        background-color: #e3e3e3;
+        position: relative;
+        overflow: hidden;
+        height: 3px;
+        
+        .qodef-progress-content{
+            max-width: 100%;
+	        width: 0;
+            overflow: hidden;
+            height: 3px;
+            @include qodefBoxSizing(border-box);
+            &.qodef-progress-gradient{
+                background: -webkit-linear-gradient(left,$first-main-color,$second-main-color);
+                background: -o-linear-gradient(right,$first-main-color,$second-main-color);
+                background: -moz-linear-gradient(right,$first-main-color,$second-main-color);
+                background: linear-gradient(to right,$first-main-color,$second-main-color);
+            }
+            &.qodef-progress-solid {
+                background-color: $first-main-color;
+            }
+        }
+    }
+}
+/* ==========================================================================
+   Progress bar shortcode end styles
+   ========================================================================== */

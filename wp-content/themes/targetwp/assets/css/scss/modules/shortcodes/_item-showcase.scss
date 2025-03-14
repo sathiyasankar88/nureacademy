@@ -1,0 +1,169 @@
+/* ==========================================================================
+   Item Showcase start styles
+   ========================================================================== */
+
+.qodef-item-showcase {
+    text-align: center;
+    opacity: 0;
+
+    .qodef-item-image {
+        display: inline-block;
+        margin-top: -180px;
+        opacity: 0;
+        width: 40%;
+        @include qodefTransform(translateY(70px));
+        &.qodef-appeared {
+            -webkit-transition: opacity .55s cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform .55s cubic-bezier(0.23, 1, 0.32, 1);
+            transition: opacity .55s cubic-bezier(0.23, 1, 0.32, 1), transform .55s cubic-bezier(0.23, 1, 0.32, 1);
+            opacity: 1;
+            @include qodefTransform(translateY(0));
+        }
+    }
+
+    .qodef-item {
+        opacity: 0;
+        &:last-child {
+            .item-showcase-border {
+                display: none;
+            }
+        }
+        .item-showcase-border {
+            height: 4px;
+            background-image: radial-gradient(circle closest-side, #d4d4d4 99%, transparent 100%);
+            background-position: 60% 70%;
+            background-size: 20px 4px;
+            background-repeat: repeat-x;
+            display: block;
+            width: 42%;
+            z-index: 1;
+            position: relative;
+            margin: 38px 0 36px;
+        }
+
+        &.qodef-item-left {
+            @include qodefTransform(translateX(-70px));
+            text-align: right;
+            overflow: hidden;
+            .item-showcase-border {
+                float: right;
+            }
+            .qodef-item-icon {
+                position: absolute;
+                right: 0;
+                padding-left: 0;
+            }
+
+            .qodef-item-content {
+                padding-right: 40px;
+            }
+
+            &.qodef-item-no-icon {
+                .qodef-item-content {
+                    padding-right: 0;
+                }
+            }
+        }
+        &.qodef-item-right {
+            text-align: left;
+            overflow: hidden;
+
+            @include qodefTransform(translateX(70px));
+            .qodef-item-icon {
+                position: absolute;
+                left: 0;
+                padding-right: 0;
+            }
+            .qodef-item-content {
+                padding-left: 40px;
+            }
+
+            &.qodef-item-no-icon {
+                .qodef-item-content {
+                    padding-left: 0;
+                }
+            }
+        }
+        &.qodef-appeared {
+            -webkit-transition: opacity .55s cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform .55s cubic-bezier(0.23, 1, 0.32, 1);
+            transition: opacity .55s cubic-bezier(0.23, 1, 0.32, 1), transform .55s cubic-bezier(0.23, 1, 0.32, 1);
+            opacity: 1;
+            @include qodefTransform(translateX(0));
+        }
+        .qodef-item-icon {
+            display: block;
+            font-size: 26px;
+            margin-bottom: 15px;
+            color: $first-main-color;
+        }
+        .qodef-item-content {
+            display: inline-block;
+            vertical-align: top;
+            .qodef-showcase-title-holder {
+                .qodef-showcase-title {
+                    position: relative;
+                    display: inline-block;
+                    margin: 0;
+                    letter-spacing: 0.8px;
+                    text-transform: capitalize;
+                }
+            }
+
+            .qodef-showcase-text-holder {
+                .qodef-showcase-text {
+                    margin: 7px 0 0;
+                }
+            }
+        }
+    }
+
+    .qodef-item-showcase-holder {
+        display: inline-block;
+        width: 30%;
+        @include qodefBoxSizing(border-box);
+
+        &.qodef-holder-left {
+            float: left;
+            text-align: right;
+
+        }
+        &.qodef-holder-right {
+            float: right;
+            text-align: left;
+
+
+        }
+    }
+
+    &.qodef-showcase-light-skin {
+        .qodef-item {
+            .qodef-item-content {
+
+                .qodef-showcase-title {
+                    color: $header-light-color;
+                }
+                .qodef-showcase-text {
+                    color: $header-light-color;
+                }
+            }
+            .item-showcase-border {
+                display: none;
+            }
+        }
+    }
+
+    &.qodef-showcase-disable-separator {
+        .qodef-item {
+            .qodef-item-content {
+                margin-bottom: 48px;
+            }
+            .item-showcase-border {
+                display: none !important;
+            }
+        }
+    }
+
+}
+
+/* ==========================================================================
+   Item Showcase end styles
+  ========================================================================== */

@@ -1,0 +1,19 @@
+.qodef-header-vertical {
+    .qodef-vertical-area-widget-holder{
+        z-index: 100;
+        position: relative;
+        height: 15%;
+        overflow: hidden;
+    }
+    .qodef-vertical-area-widget-holder-inner {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        .textwidget {
+            font-size: 13px;
+            font-family: Raleway, sans-serif;
+            line-height: 20px;
+        }
+    }
+}

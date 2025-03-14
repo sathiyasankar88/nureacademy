@@ -1,0 +1,98 @@
+/* ==========================================================================
+   WooCommerce Buttons styles - begin
+   ========================================================================== */
+
+.woocommerce-page .qodef-content,
+div.woocommerce {
+    a.button,
+    a.added_to_cart,
+    input[type="submit"],
+    button[type="submit"] {
+        -webkit-appearance: none;
+        background-color: transparent;
+        border: 1px solid #dadada;
+        color: #444;
+        cursor: pointer;
+        display: inline-block;
+        font-family: inherit;
+        font-size: 13px;
+        font-weight: 700;
+        height: 45px;
+        letter-spacing: 0.5px;
+        line-height: 45px;
+        outline: none;
+        padding: 0 21px;
+        position: relative;
+        text-transform: uppercase;
+        vertical-align: middle;
+        width: auto;
+
+        @include qodefBoxSizing(border-box);
+        @include qodefTransition(color .2s ease-in-out, background-color .2s ease-in-out, border-color .2s ease-in-out);
+        @include qodefBorderRadius(30px);
+
+        &:hover {
+            background-color: $first-main-color;
+            border-color: $first-main-color;
+            color: #fff;
+        }
+    }
+
+    a.button.added {
+        display: none !important;
+    }
+
+    #submit_comment,
+    .button.single_add_to_cart_button {
+        background-color: #f9ae3c;
+        border: none;
+        border-radius: 4px;
+        color: #fff;
+        font-family: Raleway, sans-serif;
+        font-size: 12px;
+        height: 48px;
+        line-height: 48px;
+        padding-left: 48px;
+
+        &:hover {
+            background-color: #232323;
+        }
+
+        &::before {
+            content: "\e82e";
+            display: inline-block;
+            font-family: 'Linearicons-Free';
+            font-size: 18px;
+            left: 20px;
+            position: absolute;
+            top: 0;
+        }
+    }
+
+    .button.w_add_to_cart_button {
+        &:before {
+            color: #fffefe;
+            content: "\e82e";
+            display: inline-block;
+            font-family: Linearicons-Free;
+            font-size: 17px;
+            font-weight: normal;
+            line-height: 1;
+            padding-right: 9px;
+            position: relative;
+            top: -2px;
+            vertical-align: middle;
+        }
+    }
+
+    .wc-forward:not(.added_to_cart):not(.checkout-button) {
+        font-size: 10px;
+        height: 38px;
+        line-height: 38px;
+        padding: 0 20px;
+    }
+}
+
+/* ==========================================================================
+   WooCommerce Buttons styles - end
+   ========================================================================== */

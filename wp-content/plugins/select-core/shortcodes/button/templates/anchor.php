@@ -1,0 +1,10 @@
+<a itemprop="url" href="<?php echo esc_url($link); ?>" target="<?php echo esc_attr($target); ?>" <?php target_qodef_inline_style($button_styles); ?> <?php target_qodef_class_attribute($button_classes); ?> <?php echo target_qodef_get_inline_attrs($button_data); ?> <?php echo target_qodef_get_inline_attrs($button_custom_attrs); ?>>
+    <span class="qodef-btn-text"><?php echo esc_html($text); ?></span>
+    <?php echo target_qodef_icon_collections()->renderIcon($icon, $icon_pack, $icon_params); ?>
+    <?php if ($hover_behavior == 'flip' && $type !== 'transparent') { ?> 
+	    <span class="qodef-btn-text-flip">
+	    	<span class="qodef-btn-text"><?php echo esc_html($text); ?></span>
+	    	<?php echo target_qodef_icon_collections()->renderIcon($icon, $icon_pack, $icon_params); ?>
+	    </span>
+    <?php } ?>
+</a>

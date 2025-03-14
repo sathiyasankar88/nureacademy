@@ -1,0 +1,71 @@
+# Copyright (C) 2020 Select Themes
+# This file is distributed under the same license as the Select Instagram Feed plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: Select Instagram Feed 2.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/select-instagram-feed\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2020-12-04T17:08:24+01:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.4.0\n"
+"X-Domain: select-instagram-feed\n"
+
+#. Plugin Name of the plugin
+msgid "Select Instagram Feed"
+msgstr ""
+
+#. Description of the plugin
+msgid "Plugin that adds Instagram feed functionality to our theme"
+msgstr ""
+
+#. Author of the plugin
+msgid "Select Themes"
+msgstr ""
+
+#: widgets/qodef-instagram-widget.php:13
+msgid "Select Instagram Widget"
+msgstr ""
+
+#: widgets/qodef-instagram-widget.php:14
+msgid "Display instagram images"
+msgstr ""
+
+#: widgets/qodef-instagram-widget.php:25
+msgid "Title"
+msgstr ""
+
+#: widgets/qodef-instagram-widget.php:30
+msgid "Number of photos"
+msgstr ""
+
+#: widgets/qodef-instagram-widget.php:35
+msgid "Number of columns"
+msgstr ""
+
+#: widgets/qodef-instagram-widget.php:37
+msgid "Two"
+msgstr ""
+
+#: widgets/qodef-instagram-widget.php:38
+msgid "Three"
+msgstr ""
+
+#: widgets/qodef-instagram-widget.php:39
+msgid "Four"
+msgstr ""
+
+#: widgets/qodef-instagram-widget.php:40
+msgid "Six"
+msgstr ""
+
+#: widgets/qodef-instagram-widget.php:41
+msgid "Nine"
+msgstr ""
+
+#: widgets/qodef-instagram-widget.php:47
+msgid "Images Cache Time"
+msgstr ""

@@ -1,0 +1,209 @@
+/* ==========================================================================
+   Interactive banners start styles
+   ========================================================================== */
+
+.qodef-interactive-banner-holder {
+    
+    position:relative;
+    padding:20px;
+    background-position:center center;
+    background-size: cover;
+    overflow:hidden;
+    @include qodefBoxSizing(border-box);
+    height: 100%;
+    width: 100%;
+    
+    .qodef-interactive-banner-icon {
+        position:relative;
+        display: inline-block;
+        font-size:34px;
+        color: $first-main-color;
+        margin-bottom:25px;
+        z-index:1;
+    }
+    
+    .qodef-interactive-banner-title-holder {
+        margin-bottom:5px;
+        position:relative;
+        display: block;
+        z-index:1;
+    }
+
+    .qodef-separator {
+        width:70px ;
+        border-bottom-style: solid;
+        border-bottom-width: 2px;
+        @include qodefBorderGradient($first-main-color, $second-main-color);
+    }
+
+    .qodef-interactive-banner-text-holder {
+        margin-bottom:20px;
+        
+        p {
+            position:relative;
+            display:block;
+            z-index:1;
+            margin: 11px 0;
+        }
+
+    }
+    
+    .qodef-btn {
+        z-index:1;
+        margin-top:23px;
+    }   
+    
+    .qodef-interactive-banner-overlay {
+        position:absolute;
+        top:0;
+        left:0;
+        height:100%;
+        width:100%;
+        @include qodefTransition(all 0.3s);
+    }
+    
+    .qodef-interactive-banner-cover-link {
+        position:absolute;
+        top:0;
+        left:0;
+        height:100%;
+        width:100%;
+        z-index: 100;
+    }
+
+    &.qodef-interactive-banner-align-left {
+        text-align:left;
+    }
+    
+    &.qodef-interactive-banner-align-center {
+        text-align:center;
+    }
+    
+    &.qodef-interactive-banner-align-right {
+        text-align:right;
+    }
+    
+    &.qodef-interactive-banner-light-theme {
+        
+        .qodef-interactive-banner-title-holder > * {
+            color:#fff;
+        }
+        
+        .qodef-interactive-banner-text-holder {
+            color:#fff;
+        }
+        
+        .qodef-interactive-banner-overlay {
+            background:#444;
+            opacity:0;
+        }
+        
+        &:hover .qodef-interactive-banner-overlay {
+            opacity:0.95;
+        }
+    }
+    
+    &.qodef-interactive-banner-dark-theme {
+        
+        .qodef-interactive-banner-title-holder > * {
+            color:#444;
+        }
+        
+        .qodef-interactive-banner-text-holder {
+            color:#444;
+        }
+        
+        .qodef-interactive-banner-overlay {
+            background:#fff;
+            opacity:0;
+        }
+        
+        &:hover .qodef-interactive-banner-overlay {
+            opacity:0.95;
+        }
+    }
+    
+}
+
+/* ==========================================================================
+  Interactive banners end styles
+  ========================================================================== */
+
+/* ==========================================================================
+   Info on hover type star style
+  ========================================================================== */
+
+.qodef-interactive-banner-info-on-hover {
+    .qodef-interactive-banner-inner-wrapper,
+    .qodef-interactive-banner-icon{
+        opacity: 0;
+        @include qodefTransform(translate3d(0, -40px, 0));
+        @include qodefTransition(opacity .2s, transform 0s .2s);
+    }
+    &:hover {
+        .qodef-interactive-banner-inner-wrapper,
+        .qodef-interactive-banner-icon{
+            opacity: 1;
+            @include qodefTransition(all 0.5s cubic-bezier(0.38, 0.76, 0, 0.87));
+            @include qodefTransform(translate3d(0, 0, 0));
+        }
+    }
+}
+
+/* ==========================================================================
+   Info on hover type star style END
+  ========================================================================== */
+/* ==========================================================================
+   Simple type star style
+  ========================================================================== */
+
+.qodef-interactive-banner-simple {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 50px;
+
+    .qodef-interactive-banner-content-holder {
+        display: table;
+        width: 100%;
+        height: 100%;
+        .qodef-interactive-banner-content-holder-inner {
+            display: table-row;
+            height: 50%;
+        }
+        .qodef-interactive-banner-subtitle-holder,
+        .qodef-interactive-banner-title-holder {
+            display: table-cell;
+        }
+        .qodef-interactive-banner-subtitle-holder {
+            vertical-align: top;
+            > * {
+                color: #ffffff;
+                z-index: 1;
+                position: relative;
+            }
+        }
+        .qodef-interactive-banner-title-holder {
+            vertical-align: bottom;
+            margin-bottom: 0;
+        }
+
+    }
+    .qodef-interactive-banner-inner-wrapper {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+
+    &.qodef-interactive-banner-dark-theme {
+        .qodef-interactive-banner-subtitle-holder > *{
+            color: #444444;
+        }
+    }
+}
+
+
+/* ==========================================================================
+   Simple type star style END
+  ========================================================================== */

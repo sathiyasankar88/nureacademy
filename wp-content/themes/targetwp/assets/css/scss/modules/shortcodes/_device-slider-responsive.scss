@@ -1,0 +1,74 @@
+@media only screen and (min-width: 1025px) and (max-width: $laptop-landscape-large) {
+    .qodef-device-slider-holder {
+        padding: 128px 0 180px;
+
+        .qodef-device-slider-phone {
+            top: 35px;
+            height: 81%;
+            margin-left: -1px;
+            background-size: contain;
+        }
+
+        .qodef-device-slide img {
+            width: 75%;
+            display: block;
+            margin:0 auto;
+        }
+
+        .owl-controls .owl-dots {
+            bottom: -150px;
+        }
+    }
+
+}
+
+@media only screen and (min-width: 601px) and (max-width: $ipad-landscape) {
+    .qodef-device-slider-holder {
+        padding: 40px 60px 160px;
+
+        .qodef-device-slider-phone {
+            top: -66px;
+            height: 102%;
+            background-size: contain;
+            margin-left: -1px;
+        }
+
+        .qodef-device-slide img {
+            width: 23%;
+            display: block;
+            margin:0 auto;
+        }
+
+        .owl-controls .owl-dots {
+            bottom: -150px;
+        }
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: $ipad-portrait) {
+    .qodef-device-slider-holder {
+        .qodef-device-slider-phone {
+            margin-left: -1px;
+        }
+
+        .qodef-device-slide img {
+            width: 40%;
+            display: block;
+            margin:0 auto;
+        }
+
+    }
+}
+
+@media only screen and (max-width: $phone-landscape) {
+
+    .qodef-device-slider-holder {
+
+        padding: 33% 16% 200px;
+
+        .qodef-device-slider-phone {
+            background-size: 90% auto;
+        }
+    }
+
+}

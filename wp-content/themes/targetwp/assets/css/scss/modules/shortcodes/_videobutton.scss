@@ -1,0 +1,73 @@
+/* ==========================================================================
+   Video Button shortcode start styles
+   ========================================================================== */
+.qodef-video-button {
+
+    .qodef-video-button-play {
+        position: relative;
+        width: 110px;
+        height: 110px;
+        display: block;
+        line-height: 110px;
+        font-size: 33px;
+        margin: 0 auto;
+
+        .qodef-video-button-wrapper {
+            width: 100%;
+            height: 100%;
+            display: block;
+            position: relative;
+            color: #fff;
+            @include qodefTransition(all .4s ease);
+            @include qodefBorderRadius(50%);
+            &.video-button-gradient {
+                background: -moz-linear-gradient(bottom, $first-main-color 0%, $second-main-color 100%);
+                background: -webkit-linear-gradient(bottom, $first-main-color 0%, $second-main-color 100%);
+                background: linear-gradient(to top, $first-main-color 0%, $second-main-color 100%);
+            }
+            &.video-button-solid {
+                background-color: rgba(0,0,0, 0.25);
+            }
+        }
+
+        &:hover {
+            .video-button-gradient {
+                @include qodefTransform(rotate(180deg));
+            }
+
+            .video-button-solid {
+                background-color: rgba(0,0,0, 0.5);
+            }
+        }
+
+        span:last-child {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            @include qodefTransform(translate(-50%, -50%) translateZ(0));
+        }
+    }
+
+    .qodef-video-button-title{
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    &.light {
+        .qodef-video-button-play {
+            .qodef-video-button-wrapper {
+                background-color: transparent;
+            }
+
+            span:last-child {
+                color: #fff;
+            }
+        }
+        .qodef-video-button-title{
+            color: #fff;
+        }
+    }
+}
+/* ==========================================================================
+   Video Button shortcode end styles
+   ========================================================================== */

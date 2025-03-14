@@ -1,0 +1,68 @@
+/* ==========================================================================
+# Portfolio Masonry Gallery Bottom - begin
+========================================================================== */
+
+.qodef-portfolio-single-holder.masonry-gallery-bottom{
+
+	.qodef-portfolio-content{
+		margin-bottom:0;
+	}
+
+	.qodef-portfolio-info-holder{
+		float:left;
+		width:50%;
+	}
+
+	.qodef-portfolio-social-holder{
+		float:right;
+		text-align:right;
+		width:50%;
+	}
+
+	.qodef-portfolio-social{
+		margin:110px 0 0 0;
+	}
+
+	.qodef-masonry-gallery-holder{
+		padding: 70px 0 0 0;
+		margin: 30px 0 0 0;
+		border-top: 1px solid #dadada;
+	}
+
+	.qodef-portfolio-media{
+		width:calc(100% + 32px);
+		margin: -16px;
+
+		.qodef-portfolio-single-media{
+			width:33.333%;
+
+			a {
+				margin: 16px;
+				display: block;
+				max-width: 100%;
+			}
+
+			img{
+				display:block;
+				max-width:100%;
+			}
+
+			&.large{
+				width:66.666%;
+			}
+
+		}
+
+		.qodef-single-masonry-grid-sizer{
+			width:33.333%;
+		}
+	}
+
+
+}
+
+
+
+/* ==========================================================================
+# Portfolio Masonry Gallery Bottom - end
+========================================================================== */

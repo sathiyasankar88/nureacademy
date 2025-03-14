@@ -1,0 +1,84 @@
+.qodef-pricing-slider {
+    @include ipad-landscape {
+        padding: 50px 30px 60px;
+        &.qodef-pricing-slider-one-row {
+            .qodef-pricing-slider-description-holder {
+                padding-right: 37px;
+            }
+            .qodef-pricing-slider-pricing {
+                .qodef-mark {
+                    left: 0;
+                }
+            }
+        }
+        &.qodef-pricing-slider-two-rows {
+            padding: 50px 37px 60px;
+            .qodef-pricing-slider-pricing-holder {
+                display: block;
+            }
+            .qodef-pricing-slider-description-holder {
+                margin-bottom: 0;
+                text-align: center;
+                border-bottom: 2px solid #f2f2f2;
+                padding-bottom: 30px;
+            }
+            .qodef-pricing-slider-pricing {
+                display: block;
+                width: 100%;
+                border-right: 0;
+                border-bottom: 2px solid #f2f2f2;
+                padding-bottom: 30px;
+                text-align: center;
+                .qodef-mark {
+                    margin-left: 0;
+                }
+            }
+            .qodef-pricing-slider-button {
+                display: block;
+                width: 100%;
+                text-align: center;
+                padding-top: 30px;
+            }
+        }
+    }
+    @include ipad-portrait {
+        &.qodef-pricing-slider-one-row {
+            .qodef-pricing-slider-info-holder {
+                display: block;
+            }
+            .qodef-pricing-slider-description-holder {
+                display: block;
+                padding-right: 0;
+                width: 100%;
+                border-right: 0;
+                border-bottom: 2px solid #f2f2f2;
+                padding-bottom: 30px;
+                text-align: center;
+            }
+            .qodef-pricing-slider-pricing {
+                display: block;
+                width: 100%;
+                border-right: 0;
+                border-bottom: 2px solid #f2f2f2;
+                padding-bottom: 30px;
+            }
+            .qodef-pricing-slider-button {
+                display: block;
+                width: 100%;
+                padding-top: 30px;
+            }
+        }
+    }
+    @include phone-landscape {
+        .qodef-pricing-info-pricing {
+            .qodef-value,
+            .qodef-price {
+                font-size: 33px;
+            }
+            .qodef-mark {
+                display: block;
+                margin-top: 7px;
+            }
+        }
+    }
+}

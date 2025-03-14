@@ -1,0 +1,1 @@
+<div class="qodef-post-info-comments-holder"><a itemprop="url" class="qodef-post-info-comments qodef-anchor" href="<?php comments_link(); ?>" target="_self"><span class="icon_comment"></span><span class="number"><?php comments_number('0', '1', '%'); ?></span></a></div>

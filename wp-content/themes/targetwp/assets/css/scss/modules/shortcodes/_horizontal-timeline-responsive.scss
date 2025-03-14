@@ -1,0 +1,27 @@
+@include ipad-landscape {
+
+    .qodef-horizontal-timeline {
+
+        .qodef-events-content {
+
+            .qodef-hti-content-image {
+                width: 100%;
+                display: block;
+                height: auto;
+            }
+
+            .qodef-hti-content-value {
+                width: 100%;
+            }
+
+            > ol > li {
+                &:nth-child(2n+2) {
+                    .qodef-event-text {
+                        position: relative;
+                        top: 60px;
+                    }
+                }
+            }
+        }
+    }
+}

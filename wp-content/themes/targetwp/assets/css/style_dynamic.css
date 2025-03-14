@@ -1,0 +1,36 @@
+/* generated in C:\xampp\htdocs\nureacademy\wp-content\themes\targetwp\assets\custom-styles\general-custom-styles.php target_qodef_design_styles function */
+.qodef-preload-background { background-image: url(http://localhost:84/nureacademy/wp-content/themes/targetwp/assets/img/preload_pattern.png) !important;}
+
+/* generated in C:\xampp\htdocs\nureacademy\wp-content\themes\targetwp\assets\custom-styles\general-custom-styles.php target_qodef_design_styles function */
+body { font-family: Arial;}
+
+/* generated in C:\xampp\htdocs\nureacademy\wp-content\themes\targetwp\assets\custom-styles\general-custom-styles.php target_qodef_design_styles function */
+.qodef-boxed .qodef-wrapper { background-attachment: fixed;}
+
+/* generated in C:\xampp\htdocs\nureacademy\wp-content\themes\targetwp\framework\modules\header\custom-styles\header.php target_qodef_sticky_header_styles function */
+.qodef-page-header .qodef-sticky-header .qodef-sticky-holder { background-color: rgba(255, 255, 255, 1);}
+
+/* generated in C:\xampp\htdocs\nureacademy\wp-content\themes\targetwp\framework\modules\header\custom-styles\header.php target_qodef_sticky_header_styles function */
+.qodef-main-menu.qodef-sticky-nav > ul > li > a { color: #3f3f3f;font-family: Nunito;font-size: 14px;text-transform: capitalize;font-style: normal;font-weight: 600;}
+
+/* generated in C:\xampp\htdocs\nureacademy\wp-content\themes\targetwp\framework\modules\header\custom-styles\header.php target_qodef_main_menu_styles function */
+.qodef-main-menu.qodef-default-nav > ul > li > a,
+            .qodef-page-header #lang_sel > ul > li > a,
+            .qodef-page-header #lang_sel_click > ul > li > a,
+            .qodef-page-header #lang_sel ul > li:hover > a { color: #ffffff;font-family: Nunito;font-size: 14px;font-style: normal;font-weight: 600;text-transform: capitalize;}
+
+/* generated in C:\xampp\htdocs\nureacademy\wp-content\themes\targetwp\framework\modules\header\custom-styles\header.php target_qodef_main_menu_styles function */
+.qodef-page-header #lang_sel_list { font-family: sans-serif !important;}
+
+/* generated in C:\xampp\htdocs\nureacademy\wp-content\themes\targetwp\framework\modules\header\custom-styles\header.php target_qodef_main_menu_styles function */
+.qodef-main-menu.qodef-default-nav > ul > li:hover > a,
+            .qodef-main-menu.qodef-default-nav > ul > li.qodef-active-item:hover > a,
+            body:not(.qodef-menu-item-first-level-bg-color) .qodef-main-menu.qodef-default-nav > ul > li:hover > a,
+            body:not(.qodef-menu-item-first-level-bg-color) .qodef-main-menu.qodef-default-nav > ul > li.qodef-active-item:hover > a,
+            .qodef-page-header #lang_sel ul li a:hover,
+            .qodef-page-header #lang_sel_click > ul > li a:hover { color: #ffffff;}
+
+/* generated in C:\xampp\htdocs\nureacademy\wp-content\themes\targetwp\framework\modules\header\custom-styles\header.php target_qodef_main_menu_styles function */
+.qodef-main-menu.qodef-default-nav > ul > li.qodef-active-item > a,
+			body:not(.qodef-menu-item-first-level-bg-color) .qodef-main-menu.qodef-default-nav > ul > li.qodef-active-item > a { color: #f7f7f7;}
+

@@ -1,0 +1,63 @@
+/* ==========================================================================
+# Portfolio Single Big Images - begin
+========================================================================== */
+
+.qodef-portfolio-single-holder.big-images {
+
+	.qodef-portfolio-media .qodef-portfolio-single-media {
+		a,
+		img{
+			display:block;
+		}
+
+		margin-bottom: 33px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	.qodef-portfolio-info-holder{
+		float:left;
+		width:50%;
+	}
+
+	.qodef-portfolio-social-holder{
+		float:right;
+		text-align:right;
+		width:50%;
+	}
+
+	.qodef-portfolio-social{
+		margin:132px 0 0 0;
+		.qodef-social-share-holder {
+			ul li {
+				margin-right: 23px;
+				&:last-child {
+					margin-right: -8px;
+				}
+				a span {
+					font-size: 16px;
+				}
+			}
+		}
+	}
+
+	.qodef-big-image-holder {
+		margin-bottom: 52px;
+	}
+	.qodef-portfolio-info-item {
+		margin-bottom: 21px;
+		line-height:22px;
+		padding-left: 20px;
+		color: #1c1c1c;
+		p {
+			font-size: 15px;
+			font-weight: 300;
+		}
+	}
+}
+
+/* ==========================================================================
+# Portfolio Single Big Images - end
+========================================================================== */

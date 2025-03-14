@@ -1,0 +1,29 @@
+/* ==========================================================================
+   Blockquote shortcode start styles
+   ========================================================================== */
+blockquote{
+	position: relative;
+	display: table;
+    margin-left: 38px;
+
+  .icon_quotations_holder {
+    display: table-cell;
+    vertical-align: top;
+    span {
+      font-size: 40px;
+      color:#444444;
+    }
+  }
+
+    .qodef-blockquote-text {
+      padding-left: 16px;
+      display: table-cell;
+      vertical-align: middle;
+      font-style: italic;
+      line-height: 36px;
+    }
+}
+
+/* ==========================================================================
+   Blockquote shortcode end styles
+   ========================================================================== */

@@ -1,0 +1,9 @@
+footer {
+  @include phone-portrait {
+    .qodef-footer-top {
+      &.qodef-footer-top-full {
+        padding: 40px 10px 95px;
+      }
+    }
+  }
+}

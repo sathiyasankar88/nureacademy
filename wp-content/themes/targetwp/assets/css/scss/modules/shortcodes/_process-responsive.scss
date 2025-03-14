@@ -1,0 +1,91 @@
+@include laptop-landscape-large{
+  .qodef-process-holder {
+    .qodef-process-item-holder {
+      &.qodef-pi-highlighted {
+        .qodef-pi-image-holder {
+          width: 275px;
+          height: 275px;
+          margin-top: -20px;
+        }
+
+        .qodef-pi-holder-inner {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@include laptop-landscape {
+  .qodef-process-holder {
+    .qodef-process-item-holder {
+      .qodef-pi-image-holder {
+        width: 171px;
+        height: 171px;
+      }
+
+      &.qodef-pi-highlighted {
+        .qodef-pi-image-holder {
+          width: 237px;
+          height: 237px;
+          margin-top: -30px;
+        }
+
+        .qodef-pi-holder-inner {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@include ipad-landscape{
+  .qodef-process-holder {
+    .qodef-process-bg-holder {
+      display: none;
+    }
+    &.qodef-process-holder-items-four {
+      .qodef-process-item-holder {
+        width: 50%;
+        margin-bottom: 30px;
+
+        &.qodef-pi-highlighted {
+          .qodef-pi-image-holder {
+            margin-top: 0;
+          }
+        }
+
+        .qodef-pi-holder-inner {
+          width: 100%;
+
+          .qodef-pi-content-holder {
+            padding: 0 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include ipad-portrait {
+  .qodef-process-holder {
+    &.qodef-process-holder-items-three {
+      .qodef-process-item-holder {
+        &.qodef-pi-highlighted {
+          .qodef-pi-image-holder {
+            margin-top: 0;
+          }
+        }
+      }
+    }
+
+    .qodef-process-item-holder {
+      width: 100% !important;
+      margin-bottom: 30px;
+
+      .qodef-pi-holder-inner {
+        width: 100%;
+      }
+    }
+  }
+}

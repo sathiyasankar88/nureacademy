@@ -1,0 +1,58 @@
+@import 'pinterest-responsive';
+@import 'masonry-gallery-bottom-responsive';
+@import 'masonry-gallery-left-responsive';
+
+@media only screen and (min-width: $laptop-landscape-large){
+    .qodef-portfolio-single-holder.big-images,
+    .qodef-portfolio-single-holder.big-slider{
+        .qodef-portfolio-info-item {
+            padding-left: 107px;
+        }
+    }
+}
+
+
+@media only screen and (max-width: $ipad-portrait) {
+
+    .qodef-portfolio-single-holder{
+        .qodef-portfolio-media {
+            margin-bottom:30px;
+        }
+    }
+    .qodef-portfolio-single-holder.big-images,
+    .qodef-portfolio-single-holder.big-slider {
+        .qodef-portfolio-info-item {
+            padding-left: 0;
+        }
+    }
+}
+
+
+@media only screen and (max-width: $phone-landscape) {
+
+    .qodef-portfolio-single-holder{
+        .qodef-portfolio-single-nav {
+            .qodef-nav-label{
+                display:none;
+            }
+        }
+
+        .qodef-portfolio-media {
+            margin-bottom:30px;
+        }
+
+        .qodef-portfolio-social-holder,
+        .qodef-portfolio-info-holder{
+            float:none !important;
+            text-align:left !important;
+            width:100% !important;
+            margin:0 !important;
+        }
+
+        .qodef-portfolio-social,
+        .qodef-portfolio-like{
+            float:none !important;
+            margin-top:30px !important;
+        }
+    }
+}

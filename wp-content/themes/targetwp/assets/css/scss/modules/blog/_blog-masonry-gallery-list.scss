@@ -1,0 +1,214 @@
+/* #Blog Masonry Gallery - start
+========================================================================== */
+
+.qodef-blog-holder.qodef-blog-type-masonry-gallery {
+
+  transition: none !important;
+  overflow: visible !important;
+
+
+  article {
+    display: block;
+    margin-bottom: 0;
+    width: 25%;
+    padding: 0;
+    text-align: left;
+    vertical-align: top;
+    z-index: 100;
+    box-sizing: border-box;
+    @include qodefTransition(border-color 0.15s ease-out);
+    .qodef-post-info>div {
+        display: inline-block;
+        position: relative;
+        padding-right: 12px;
+        margin-right: 12px;
+         span,
+         a{
+           text-transform: uppercase;
+         }
+      &:after {
+        content: '|';
+        position: absolute;
+        right: 0;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        transform: translateY(-50%);
+      }
+      &:last-child {
+        margin-right: 0;
+        padding-right: 0;
+        &:after {
+          display: none;
+        }
+      }
+    }
+
+
+    &.format-link,
+    &.format-quote {
+      @include qodefTransition(background 0.4s ease-out);
+      .qodef-post-text {
+        @include qodefTransform(translateY(-50%));
+        top: 50%;
+        left: 0;
+        bottom: auto;
+        text-align: center;
+        background-color: transparent;
+        .qodef-separator {
+          display: block;
+          border-bottom-color: #ffffff!important;
+          border-bottom-width: 2px;
+          margin: 16px auto 13px;
+          width:30px;
+        }
+      }
+    }
+    &.format-quote {
+      background: $first-main-color;
+
+    }
+    &.format-link {
+      background: $second-main-color;
+
+    }
+
+    &:not(.format-quote):not(.format-link) {
+      .qodef-post-text {
+        -webkit-transition: -webkit-transform .3s cubic-bezier(.44,1.22,0,1.43);
+        transition: transform .3s cubic-bezier(.44,1.22,0,1.43);
+      }
+      &:hover {
+        .qodef-post-text {
+          -webkit-transition: -webkit-transform .5s cubic-bezier(.44,1.22,0,1.43);
+          transition: transform .5s cubic-bezier(.44,1.22,0,1.43);
+          @include qodefTransform(translateY(-20px));
+        }
+      }
+    }
+
+    .qodef-blog-masonry-gallery-link {
+      position: absolute;
+      top:0;
+      left:0;
+      height: 100%;
+      width: 100%;
+    }
+
+    &.qodef-post-size-large-width-height,
+    &.qodef-post-size-large-width
+    {
+      width: 50%;
+    }
+
+    .qodef-post-image {
+      margin-bottom: 0;
+    }
+    .qodef-post-title{
+      margin-bottom: 6px;
+      line-height: 30px;
+    }
+    .qodef-post-title,
+    .qodef-post-title a,
+    .qodef-post-info,
+    .qodef-post-info a
+    {
+      color: #fff;
+    }
+
+    .qodef-quote-author {
+      color: #ffffff;
+      text-transform: uppercase;
+      font-size:12px;
+    }
+
+    .qodef-post-content,
+    .qodef-post-image,
+    .qodef-post-image-inner{
+      height:100%;
+    }
+
+
+    .qodef-post-content {
+      position: relative;
+      overflow: hidden;
+    }
+
+    img{
+      width: 100%;
+    }
+
+    .qodef-post-mark{
+      color: #fff;
+      font-size: 25px;
+      margin: 0 auto;
+      display: block;
+      top: 0;
+      span {
+        font-size: 61px;
+        line-height: 18px;
+      }
+
+      &.qodef-link-mark{
+        padding-bottom: 10px;
+      }
+
+    }
+  }
+
+  .qodef-post-overlay{
+    background: -webkit-linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.62));
+    background: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.62));
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    @include qodefTransition(top .6s);
+  }
+
+  .qodef-blog-masonry-gallery-link:after {
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    background:rgba(0,0,0,.15);
+    opacity:0;
+    @include qodefTransition(opacity .6s ease);
+  }
+
+  article:hover {
+    .qodef-post-overlay{
+      top:-20%;
+    }
+
+    .qodef-blog-masonry-gallery-link:after {
+      opacity: 1;
+    }
+  }
+
+  .qodef-blog-masonry-gallery-grid-sizer {
+    width: 25%;
+  }
+  .qodef-blog-masonry-gallery-grid-gutter {
+    width: 0;
+  }
+
+  .qodef-post-text{
+    display: block;
+    position: absolute;
+    bottom: 42px;
+    left: 0;
+    padding: 0 61px 0;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: left;
+    z-index: 100;
+  }
+
+}
+
+/* #Blog Masonry Gallery - end
+========================================================================== */

@@ -1,0 +1,1221 @@
+@import 'variables';
+@import 'mixins';
+
+/* ==========================================================================
+   #Comments styles - start
+   ========================================================================== */
+
+.qodef-comment-holder {
+    padding: 50px 0 9px;
+    margin: 0 0 0;
+
+    .qodef-comment-image {
+        display: block;
+        width: 117px;
+        height: 117px;
+        float: left;
+
+        img {
+            @include qodefBorderRadius(50%);
+        }
+    }
+
+    .qodef-comment-text {
+        padding: 0 0 0 156px;
+        min-height: 117px;
+
+        .qodef-comment-name {
+            margin-bottom: 9px;
+        }
+
+        .qodef-text-holder {
+            p {
+                margin: 0;
+            }
+        }
+
+        .qodef-comment-info {
+            display: inline-block;
+            width: 100%;
+            vertical-align: middle;
+            margin-top: 6px;
+            color: #444;
+
+            .qodef-comment-date {
+                font-size: 12px;
+                text-transform: uppercase;
+            }
+        }
+
+        .replay,
+        .comment-reply-link,
+        .comment-edit-link {
+            font-size: 12px;
+            text-transform: uppercase;
+            margin-left: 10px;
+            color: #444;
+            letter-spacing: 0.5px;
+
+            &:hover {
+                color: $first-main-color;
+            }
+        }
+
+        .replay,
+        .comment-reply-link {
+            &:before {
+                content: "\f112";
+                font-family: "FontAwesome";
+                margin-right: 8px;
+                font-size: 10px;
+            }
+        }
+
+        .comment-edit-link {
+            &:before {
+                content: "\f040";
+                font-family: "FontAwesome";
+                margin-right: 8px;
+            }
+        }
+    }
+
+    .qodef-pingback-comment {
+        .qodef-comment-text {
+            min-height: initial;
+            padding: 0;
+        }
+    }
+
+}
+
+.qodef-comment-list {
+    list-style: none;
+    position: relative;
+    z-index: 150;
+    padding: 0;
+    margin: 33px 0 0;
+
+    li {
+        display: inline-block;
+        position: relative;
+        width: 100%;
+
+        .children {
+            margin: 43px 0 0 0;
+            padding: 0 0 0 157px;
+
+            li {
+                padding-top: 44px;
+                padding-bottom: 40px;
+                box-sizing: border-box;
+                border-top: 1px solid #dadada;
+
+                &:last-child {
+                    padding-bottom: 0;
+                }
+            }
+        }
+    }
+
+    > li {
+        margin: 0 0 30px;
+        padding-bottom: 41px;
+        border-bottom: 1px solid #dadada;
+    }
+}
+
+.qodef-comment-form {
+    margin-bottom: 40px;
+}
+
+.comment-respond {
+    margin: 20px 0;
+
+    .comment-reply-title {
+        font-size: 18px;
+        margin-bottom: 9px;
+        font-weight: 400;
+        color: #444444;
+
+        #cancel-comment-reply-link {
+            font-size: 15px;
+            line-height: 28px;
+            color: $first-main-color;
+            font-weight: 400;
+        }
+    }
+
+    .logged-in-as {
+        margin-bottom: 10px;
+
+        a {
+            color: #444;
+
+            &:hover {
+                color: $first-main-color;
+            }
+        }
+
+        a:first-child {
+            &:before {
+                content: "\f007";
+                font-family: "FontAwesome";
+                margin-right: 8px;
+            }
+        }
+
+        a:nth-child(2) {
+            margin-left: 10px;
+
+            &:before {
+                content: "\f011";
+                font-family: "FontAwesome";
+                margin-right: 8px;
+            }
+        }
+    }
+}
+
+%input-style-comment {
+    width: 100%;
+    margin-bottom: 18px;
+    padding: 14px 22px;
+    border: 1px solid #dadada;
+    outline: 0;
+    font-family: inherit;
+    font-size: 15px;
+    background-color: transparent;
+    color: #bababa;
+    @include qodefBoxSizing(border-box);
+
+    &:focus {
+        border: 1px solid #dadada;
+    }
+}
+
+%input-style-contact {
+    width: 100%;
+    margin-bottom: 5px;
+    padding: 10px 0;
+    border: 1px solid transparent;
+    border-bottom-color: #dadada;
+    outline: 0;
+    font-family: inherit;
+    font-size: 13px;
+    background-color: transparent;
+    color: #707070;
+    @include qodefBoxSizing(border-box);
+    -webkit-appearance: none;
+
+    &:focus {
+        border-bottom: 1px solid #dadada;
+    }
+}
+
+%label-style {
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 700;
+    color: #444444;
+    display: inline-block;
+    margin-bottom: 8px;
+}
+
+.qodef-cf7-default-wrapper {
+    padding: 26px 45px;
+    margin-bottom: 42px;
+    @include qodefBoxShadow;
+    border-bottom: 3px solid transparent;
+    @include qodefBorderGradient($first-main-color, $second-main-color);
+}
+
+.wpcf7-form-control {
+    &.wpcf7-text,
+    &.wpcf7-number,
+    &.wpcf7-date,
+    &.wpcf7-textarea,
+    &.wpcf7-select,
+    &.wpcf7-quiz {
+        @extend %input-style-contact;
+    }
+
+    &.wpcf7-textarea {
+        max-width: 100%;
+    }
+}
+
+#respond textarea,
+#respond input[type='text'],
+#respond input[type='email'],
+.post-password-form input[type='password'] {
+    @extend %input-style-comment;
+}
+
+.qodef-comment-label {
+    @extend %label-style;
+    font-weight: 400;
+}
+
+#respond textarea {
+    padding: 18px 21px;
+    margin-bottom: 10px;
+    border: 1px solid #ebebeb;
+
+    &:focus {
+        border: 1px solid #ebebeb;
+    }
+}
+
+.post-password-form input[type='submit'],
+input.wpcf7-form-control.wpcf7-submit {
+    position: relative;
+    outline: none;
+    font-style: normal;
+    font-weight: 700;
+    font-family: Raleway, sans-serif;
+    padding: 0 53px;
+    font-size: 12px;
+    line-height: 47px;
+    text-transform: uppercase;
+    @include qodefTransition(color 0.3s ease-out, background-color 0.3s ease-out, border-color 0.3s ease-out);
+    @include qodefBoxSizing(border-box);
+    border: 1px solid #f9ae3c;
+    color: #fff;
+    background-color: #f9ae3c;
+    @include qodefBorderRadius(3px);
+    cursor: pointer;
+
+    &:hover {
+        color: #fff;
+        background-color: #232323;
+        border-color: #232323;
+        @include qodefTransition(color 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940), background-color 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940), border-color 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940));
+    }
+}
+
+#submit_comment {
+    cursor: pointer;
+    padding: 0 45px 0 50px;
+}
+
+@include phone-landscape {
+    .qodef-comment-list li .children {
+        padding-left: 50px;
+    }
+}
+
+@include phone-portrait {
+    .qodef-comment-image {
+        margin-right: 10px;
+    }
+    .qodef-comment-holder .qodef-comment-text {
+        padding-left: 0px;
+    }
+}
+
+/* ==========================================================================
+   #Comments styles - end
+   ========================================================================== */
+
+/* ==========================================================================
+   #Qodef subscription form - start
+   ========================================================================== */
+
+.qodef-content,
+.sidebar,
+.woocommerce-page {
+    .qodef-subscription-form {
+        position: relative;
+
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: 0px;
+            left: 0;
+            height: 0;
+            width: 100%;
+            border-top: 3px solid $first-main-color;
+            opacity: 0;
+            @include qodefTransition(opacity .4s);
+        }
+
+        &.qodef-focus {
+            &:after {
+                opacity: 1;
+            }
+        }
+
+        .wpcf7-form-control {
+            &.wpcf7-text {
+                color: #9f9f9f;
+                background-color: #fff;
+                font-weight: 300;
+                font-size: 15px;
+                line-height: 22px;
+                padding: 13px 70px 13px 22px;
+                border-bottom: 3px solid;
+                margin-bottom: 0;
+                @include qodefBorderGradient($first-main-color, $second-main-color);
+                border-top: 0;
+                border-left: 0;
+                border-right: 0;
+
+                &:focus {
+                    color: #1c1c1c;
+
+                    &::-webkit-input-placeholder {
+                        /* WebKit, Blink, Edge */
+                        color: #1c1c1c;
+                    }
+
+                    &:-moz-placeholder {
+                        /* Mozilla Firefox 4 to 18 */
+                        color: #1c1c1c;
+                        opacity: 1;
+                    }
+
+                    &::-moz-placeholder {
+                        /* Mozilla Firefox 19+ */
+                        color: #1c1c1c;
+                        opacity: 1;
+                    }
+
+                    &:-ms-input-placeholder {
+                        /* Internet Explorer 10-11 */
+                        color: #1c1c1c;
+                        line-height: normal;
+                    }
+                }
+
+                &::-webkit-input-placeholder {
+                    /* WebKit, Blink, Edge */
+                    color: #9f9f9f;
+                }
+
+                &:-moz-placeholder {
+                    /* Mozilla Firefox 4 to 18 */
+                    color: #9f9f9f;
+                    opacity: 1;
+                }
+
+                &::-moz-placeholder {
+                    /* Mozilla Firefox 19+ */
+                    color: #9f9f9f;
+                    opacity: 1;
+                }
+
+                &:-ms-input-placeholder {
+                    /* Internet Explorer 10-11 */
+                    color: #9f9f9f;
+                    line-height: normal;
+                }
+            }
+
+            &.wpcf7-submit {
+                position: absolute;
+                right: 0;
+                top: 0;
+                line-height: 51px;
+                width: 70px;
+                padding: 0;
+                height: 51px;
+                border: 0;
+                font-family: Linearicons-Free;
+                color: #1c1c1c;
+                font-size: 22px;
+                margin-top: 0;
+                background: transparent;
+
+                &:hover {
+                    background: transparent;
+                    color: $first-main-color;
+                }
+            }
+        }
+
+        .ajax-loader {
+            display: none;
+        }
+    }
+}
+
+/* ==========================================================================
+   #Qodef subscription form - end
+   ========================================================================== */
+
+/* ==========================================================================
+   #Qodef booking form - start
+   ========================================================================== */
+
+.qodef-booking-form {
+    position: relative;
+    padding: 43px;
+    background-color: rgba(0, 0, 0, 0.23);
+    @include qodefBorderRadius(3px);
+
+    .wpcf7-form-control {
+        &.wpcf7-text {
+            font-size: 15px;
+            background-color: #fff;
+            margin-bottom: 19px;
+            color: #bababa;
+            padding: 22px;
+            @include qodefBorderRadius(3px);
+        }
+
+        &.wpcf7-submit {
+            width: 100%;
+            line-height: 66px;
+            background-color: #5ae4b3;
+            border: 0;
+        }
+    }
+
+    .ajax-loader {
+        display: none;
+    }
+}
+
+/* ==========================================================================
+   #Qodef booking form - end
+   ========================================================================== */
+
+/* ==========================================================================
+   #Qodef Threecolumns  form - start
+   ========================================================================== */
+
+.qodef-newsletter-form {
+    width: 666px;
+
+    .qodef-input-holder {
+        width: 39%;
+        display: inline-block;
+        padding-right: 5px;
+        box-sizing: border-box;
+    }
+
+    .qodef-button-holder {
+        width: 20%;
+        display: inline-block;
+        box-sizing: border-box;
+        top: -3px;
+        position: relative;
+    }
+
+    .wpcf7-form-control {
+        &.wpcf7-text {
+            font-size: 15px !important;
+            background-color: #fff;
+            color: #bababa;
+            padding: 15px !important;
+            @include qodefBorderRadius(3px);
+            border-bottom: 0;
+            margin-bottom: 0;
+
+            &:focus {
+                border-bottom-width: 1px;
+                border-bottom-style: solid;
+            }
+        }
+
+        &.wpcf7-submit {
+            width: 100%;
+            line-height: 51px !important;
+            background-color: #f9ae3c;
+            border: 0;
+        }
+    }
+
+    .ajax-loader {
+        display: none;
+    }
+}
+
+/* ==========================================================================
+   #Qodef booking form - end
+   ========================================================================== */
+/* ==========================================================================
+   #Qodef Border gradient bottom  form - start
+   ========================================================================== */
+
+.qodef-newsletter-with-bottom-border {
+    .qodef-input-border {
+        .wpcf7-form-control {
+            &.wpcf7-text {
+                font-family: "Open Sans", sans-serif;
+                font-weight: 300;
+                border: 0;
+                background-color: #fff;
+                border-bottom-style: solid;
+                border-bottom-width: 3px;
+                @include qodefBorderRadius(3px);
+                @include qodefBorderGradient($first-main-color, $second-main-color);
+                @include qodefBoxShadow;
+                margin: 11px 0;
+                color: #9f9f9f;
+                padding: 11px 16px;
+                font-size: 15px;
+            }
+        }
+    }
+
+    .wpcf7-form-control {
+        &.wpcf7-submit {
+            line-height: 50px;
+            background-color: #f9ae3c;
+            border: 0;
+            padding: 0 37px;
+        }
+    }
+
+    .ajax-loader {
+        display: none;
+    }
+
+}
+
+/* ==========================================================================
+   #Qodef booking form - end
+   ========================================================================== */
+
+/* ==========================================================================
+   #Pagination styles - start
+   ========================================================================== */
+
+.qodef-pagination {
+
+    display: inline-block;
+    width: 100%;
+    vertical-align: middle;
+    text-align: center;
+    position: relative;
+
+    ul {
+        @include qodefBoxShadowCustom(0px 0px 5px 0px rgba(0, 0, 0, 0.06));
+        height: 38px;
+    }
+
+    li {
+        text-align: center;
+        display: inline-block;
+
+        &.qodef-pagination-number {
+
+            a,
+            &.active span {
+                position: relative;
+                display: inline-block;
+                vertical-align: middle;
+                text-decoration: none;
+                cursor: pointer;
+                white-space: nowrap;
+                font-size: 12px;
+                font-weight: 400;
+                color: #444;
+                margin: 0 10px;
+                line-height: 38px;
+
+            }
+
+            a:hover,
+            &.active span {
+                color: #bdbdbd;
+
+                &:after {
+                    border-color: #bdbdbd;
+                }
+            }
+        }
+
+        &.qodef-pagination-prev {
+            float: left;
+
+            .qodef-pagination-arrow {
+                margin-right: 14px;
+                border-right: 1px solid #efefef;
+            }
+        }
+
+        &.qodef-pagination-next {
+            float: right;
+
+            .qodef-pagination-arrow {
+                margin-left: 14px;
+                border-left: 1px solid #efefef;
+
+            }
+        }
+
+        &.qodef-pagination-last-page,
+        &.qodef-pagination-first-page,
+        .qodef-pagination-arrow {
+            color: $second-main-color;
+            font-size: 22px;
+            vertical-align: middle;
+            width: 38px;
+            height: 38px;
+            line-height: 38px;
+            display: inline-block;
+        }
+
+        &.qodef-pagination-first-page {
+            position: absolute;
+            top: 44px;
+            left: 0;
+            float: left;
+
+            a {
+                color: #c8c7c7;
+            }
+
+            span {
+                display: inline-block;
+                vertical-align: middle;
+
+                &:first-child {
+                    margin-right: 11px;
+                }
+            }
+        }
+
+        &.qodef-pagination-last-page {
+            position: absolute;
+            top: 44px;
+            right: 0;
+            float: right;
+
+            a {
+                color: #c8c7c7;
+            }
+
+            span {
+                display: inline-block;
+                vertical-align: middle;
+
+                &:last-child {
+                    margin-left: 11px;
+                }
+            }
+        }
+
+        .qodef-pagination-text {
+            color: #444444;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 22px;
+            vertical-align: middle;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.page-template-blog-masonry-full-width {
+    .qodef-pagination {
+        padding: 80px 2%;
+        box-sizing: border-box;
+    }
+
+}
+
+/* ==========================================================================
+   #Pagination styles - end
+   ========================================================================== */
+
+/* ==========================================================================
+   #Owl Slider (Blog single, Portfolio single) - begin
+   ========================================================================== */
+.qodef-owl-slider {
+
+    .owl-nav {
+
+        .owl-prev {
+            position: absolute;
+            top: 50%;
+            @include qodefTransform(translateY(-50%));
+            left: 2%;
+        }
+
+        .owl-next {
+            position: absolute;
+            top: 50%;
+            @include qodefTransform(translateY(-50%));
+            right: 2%;
+        }
+
+        .qodef-prev-icon,
+        .qodef-next-icon {
+            font-size: 20px;
+            line-height: 20px;
+            color: #444444;
+            vertical-align: middle;
+        }
+
+    }
+
+    .owl-dots {
+        text-align: center;
+
+        .owl-dot {
+            display: inline-block;
+        }
+
+        .owl-dot span {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            margin: 3px;
+            filter: Alpha(Opacity=50);
+            opacity: 0.5;
+            -webkit-border-radius: 20px;
+            -moz-border-radius: 20px;
+            border-radius: 20px;
+            background: #e3e3e3;
+        }
+
+        .owl-dot.active span {
+            opacity: 1;
+        }
+
+    }
+
+}
+
+/* ==========================================================================
+   #Owl Slider (Blog single, Portfolio single) - end
+   ========================================================================== */
+
+/* ==========================================================================
+   #404 styles - start
+   ========================================================================== */
+
+.qodef-404-page {
+    padding: 0;
+}
+
+.qodef-page-not-found {
+    margin: 80px 0;
+
+    h2 {
+        margin-bottom: 30px;
+    }
+
+    h4 {
+        margin-bottom: 30px;
+    }
+}
+
+/* ==========================================================================
+   #404 styles - end
+   ========================================================================== */
+
+/* ==========================================================================
+   #Back to Top styles - start
+   ========================================================================== */
+#qodef-back-to-top {
+    position: fixed;
+    width: 60px;
+    right: 60px;
+    bottom: 65px;
+    margin: 0;
+    z-index: 10000;
+    @include qodefBorderRadius(50%);
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.06);
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.06);
+    visibility: hidden;
+    opacity: 0;
+    @include qodefTransform(scale(.4));
+    @include qodefTransition(all .2s);
+
+    .qodef-icon-stack {
+        font-size: 23px;
+
+        i {
+            position: relative;
+            left: 1px;
+        }
+    }
+
+    .qodef-back-to-top-bgrnd {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        @include qodefTransform(rotate(-180deg));
+        @include qodefBorderRadius(50%);
+        @include qodefAngleBackgroundGradient($first-main-color, $second-main-color);
+        -webkit-transition: -webkit-transform .3s ease;
+        transition: transform .3s ease;
+        z-index: 10;
+    }
+
+    &.off {
+        opacity: 0;
+        visibility: hidden;
+        @include qodefTransform(scale(.4));
+
+        .qodef-back-to-top-bgrnd {
+            @include qodefTransform(rotate(180deg));
+        }
+    }
+
+    &.on {
+        opacity: 1;
+        visibility: visible;
+        @include qodefTransform(scale(1));
+        -webkit-transition: -webkit-transform .4s cubic-bezier(.38, .76, 0, .87), opacity .2s;
+        transition: transform .4s cubic-bezier(.38, .76, 0, .87), opacity .2s;
+
+        .qodef-back-to-top-bgrnd {
+            @include qodefTransform(rotate(0deg));
+        }
+    }
+
+    > span {
+        display: block;
+        position: relative;
+        box-sizing: border-box;
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+        @include qodefBorderRadius(50%);
+        text-align: center;
+        color: #fff;
+        font-size: 16px;
+        z-index: 100;
+
+        span {
+            display: block;
+            line-height: inherit;
+        }
+    }
+
+    &:hover {
+        -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+        box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+
+        .qodef-back-to-top-bgrnd {
+            @include qodefTransform(rotate(180deg));
+            -webkit-transition: -webkit-transform 1s cubic-bezier(.38, .76, 0, .87);
+            transition: transform 1s cubic-bezier(.38, .76, 0, .87);
+        }
+    }
+
+}
+
+/* ==========================================================================
+   #Back to Top styles - end
+   ========================================================================== */
+
+/* ==========================================================================
+   #Self Hosted Video styles - start
+   ========================================================================== */
+.qodef-self-hosted-video-holder {
+    .qodef-video-wrap {
+        .mejs-container,
+        .mejs-overlay-play {
+            height: 100% !important; /*!important because of the inline style*/
+            width: 100% !important; /*!important because of the inline style*/
+        }
+    }
+}
+
+/* ==========================================================================
+   #Self Hosted Video styles - end
+   ========================================================================== */
+
+/* ==========================================================================
+   #Dave's WordPress Live Search - start
+   ========================================================================== */
+
+.qodef-search-element {
+
+    #searchform {
+
+        width: 100%;
+        box-sizing: border-box;
+        display: inline-block;
+        overflow: hidden;
+        @include qodefBorderRadius(5px);
+        vertical-align: middle;
+        position: relative;
+
+        label {
+            display: none;
+        }
+
+        input[type="text"] {
+            display: inline-block;
+            text-decoration: none;
+            border: 0;
+            outline: 0;
+            color: #b4b4b4;
+            background-color: #fff;
+            font-family: inherit;
+            margin: 0;
+            width: 100%;
+            height: 49px;
+            float: left;
+            font-size: 15px;
+            font-weight: 300;
+            @include qodefBoxSizing(border-box);
+            @include qodefBorderRadius(5px);
+            padding: 0 65px 0 30px;
+        }
+
+        input[type="submit"] {
+            width: 49px;
+            height: 49px;
+            line-height: 49px;
+            display: inline-block;
+            margin: 0;
+            padding: 0;
+            outline: 0;
+            border: 0;
+            box-sizing: initial;
+            text-decoration: none;
+            background-color: transparent;
+            color: #2d2d2d;
+            font-family: 'Linearicons-Free', sans-serif;
+            font-weight: normal;
+            text-align: center;
+            cursor: pointer;
+            white-space: nowrap;
+            float: right;
+            @include qodefTransition(color 0.2s ease-out, background-color 0.2s ease-out);
+            font-size: 20px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            @include qodefBorderRadius(0 3px 3px 0);
+
+            &:hover {
+                background-color: #202020;
+                color: #fff;
+            }
+        }
+    }
+
+    &.qodef-live-search-enabled {
+        #searchform {
+            i {
+                position: absolute;
+                right: 25px;
+                top: 50%;
+                @include qodefTransform(translateY(-50%));
+                font-size: 20px;
+                color: #2d2d2d;
+            }
+        }
+    }
+}
+
+.dwls_search_results {
+    display: block;
+    padding: 0 27px 0 27px;
+    max-height: 500px;
+    //margin: 65px 0 0 0;
+    position: absolute;
+    left: 0;
+    overflow: auto;
+    z-index: 9999;
+    list-style-type: none;
+    list-style-image: none;
+    list-style-position: inside;
+    border-radius: 0 0 2px 2px;
+    border: 1px solid #dadada;
+    @include qodefBoxSizing(border-box);
+    background-color: #fff;
+    margin: 0;
+
+    @include ipad-landscape {
+        margin: 0;
+    }
+
+    li {
+        display: block;
+        border-bottom: 1px solid #dadada;
+        margin: 0 0 0 0;
+        text-align: left;
+        text-decoration: none;
+
+        p {
+            margin: 5px 0 0 0;
+        }
+
+        a,
+        a:visited {
+            display: block;
+            margin-left: 0;
+            padding: 18px 0;
+            text-decoration: none;
+            color: #797979;
+        }
+
+        a:hover,
+        a:visited {
+            color: $first-main-color;
+        }
+    }
+
+    .daves-wordpress-live-search_title {
+        span {
+            display: block;
+        }
+
+        .search-category {
+            font-size: 90%;
+        }
+
+        .daves-wordpress-live-search_title,
+        .daves-wordpress-live-search_title span {
+            display: block;
+        }
+    }
+
+    .daves-wordpress-live-search_author {
+        margin: 5px 0 0 0;
+        font-size: 90%;
+    }
+
+    .daves-wordpress-live-search_date {
+        margin: 0;
+        font-size: 90%;
+    }
+
+    .excerpt,
+    .meta {
+        width: 100%;
+    }
+
+    .search_footer {
+        a {
+            display: block;
+            margin-left: 0;
+            padding: 18px 0;
+            text-decoration: none;
+            color: #797979;
+
+            &:hover,
+            &:visited {
+                color: $first-main-color;
+            }
+        }
+    }
+
+    .clearfix {
+        float: none !important;
+        clear: both !important;
+    }
+
+}
+
+#search_results_activity_indicator {
+    width: 30px;
+    height: 30px;
+
+    canvas {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top: 8px;
+        left: 15px;
+        background: #fff;
+    }
+}
+
+/* ==========================================================================
+   #Dave's WordPress Live Search - end
+   ========================================================================== */
+
+/* ==========================================================================
+   #Screen reader text - start
+   ========================================================================== */
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+
+    &:focus {
+        background-color: #f1f1f1;
+        border-radius: 3px;
+        box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+        clip: auto !important;
+        color: #21759b;
+        display: block;
+        font-size: 14px;
+        font-size: 0.875rem;
+        font-weight: bold;
+        height: auto;
+        left: 5px;
+        line-height: normal;
+        padding: 15px 23px 14px;
+        text-decoration: none;
+        top: 5px;
+        width: auto;
+        z-index: 100000; /* Above WP toolbar. */
+    }
+
+}
+
+/* ==========================================================================
+   #Screen reader text - end
+   ========================================================================== */
+
+/* ==========================================================================
+   #Browser specific styles - start
+   ========================================================================== */
+
+li, a, div, span {
+    -webkit-tap-highlight-color: transparent;
+}
+
+input[type=text]::-ms-clear {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
+input[type=text]::-ms-reveal {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    display: none;
+}
+
+textarea,
+input:not([type=checkbox]):not([type=radio]) {
+    box-shadow: none !important;
+    -webkit-appearance: none;
+}
+
+textarea {
+    overflow: hidden;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+input[type='number'] {
+    -moz-appearance: textfield;
+}
+
+/* ==========================================================================
+   #Browser specific styles - end
+   ========================================================================== */

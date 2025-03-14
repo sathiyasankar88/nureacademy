@@ -1,0 +1,44 @@
+/* ==========================================================================
+# Countdown responsive style - begin
+========================================================================== */
+.countdown-section {
+    @include phone-landscape {
+        width: 100% !important;
+        margin-bottom: 15px;
+		border: 0;
+		padding:10px 0;
+    }
+}
+
+
+.countdown-amount {
+
+	@include ipad-landscape {
+		font-size: 50px !important;
+		line-height: 50px !important;
+	}
+
+	@include phone-landscape {
+		font-size: 55px !important;
+		line-height: 55px !important;
+		margin-bottom: 10px;
+	}
+
+}
+
+
+.countdown-period {
+
+	@include ipad-landscape {
+		font-size: 15px !important;
+	}
+
+	@include phone-landscape {
+		font-size: 20px !important;
+	}
+
+}
+
+/* ==========================================================================
+# Countdown responsive style - end
+========================================================================== */

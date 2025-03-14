@@ -1,0 +1,274 @@
+/* ==========================================================================
+   Masonry Gallery - start
+   ========================================================================== */
+
+.qodef-masonry-gallery-grid-sizer{
+	width: 25%;
+}
+
+.qodef-masonry-gallery-holder{
+	margin: -15px -15px 0 -15px;
+	opacity: 0;
+
+	.qodef-masonry-gallery-item {
+		box-sizing: border-box;
+		padding: 15px;
+		z-index: 1;
+		width: 25%;
+
+		.qodef-masonry-gallery-item-text {
+			margin: 0;
+		}
+		&.qodef-mg-square-big {
+			width: 50%;
+
+			.qodef-masonry-gallery-item-outer {
+				text-align: center;
+			}
+
+			.qodef-masonry-gallery-item-content{
+				padding: 13%;
+			}
+		}
+
+		&.qodef-mg-rectangle-landscape {
+			width: 50%;
+
+			.qodef-masonry-gallery-image-holder{
+				img {
+					max-height: inherit;
+				}
+			}
+		}
+
+		&.qodef-mg-rectangle-portrait {
+			.qodef-masonry-gallery-image-holder{
+				img {
+					max-width: inherit;
+					width: auto;
+					height: 100%;
+				}
+			}
+		}
+
+		.qodef-masonry-gallery-image-holder{
+			height: 100%;
+			width: 100%;
+			position: relative;
+			overflow: hidden;
+			@include qodefTransform(translateZ(0px));
+		}
+
+		.qodef-masonry-gallery-item-outer {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			text-align: left;
+			box-sizing: border-box;
+			padding: 15px;
+		}
+
+		.qodef-masonry-gallery-item-inner {
+			position: relative;
+			height: 100%;
+			width: 100%;
+			display: table;
+		}
+
+		.qodef-masonry-gallery-item-content {
+			display: table-cell;
+			vertical-align: middle;
+			padding: 36px;
+		}
+
+		&.qodef-mg-simple {
+
+            .qodef-masonry-gallery-item-outer {
+                text-align: center;
+            }
+
+			.qodef-masonry-gallery-item-inner {
+				background-color: $second-main-color;
+
+                .qodef-masonry-gallery-item-icon {
+                    font-size: 34px;
+                    color: #234539;
+                    margin-bottom: 19px;
+                    display: inline-block;
+                }
+
+				.qodef-masonry-gallery-item-title {
+                    margin-bottom: 10px;
+					color: #fff;
+				}
+
+                .qodef-masonry-gallery-item-text {
+                    color: #fff;
+                }
+
+			}
+
+		}
+
+		&.qodef-mg-with-button {
+
+            .qodef-masonry-gallery-item-outer {
+                text-align: left;
+            }
+
+			.qodef-masonry-gallery-item-inner {
+
+				.qodef-masonry-gallery-item-title {
+					color: #fff;
+				}
+
+                .qodef-masonry-gallery-item-separator {
+                    display: inline-block;
+                    width: 67px;
+                    height: 2px;
+                    background-color: #fff;
+                    margin-bottom: 25px;
+                    margin-top: 29px;
+                }
+
+                .qodef-masonry-gallery-item-text {
+                    color: #fff;
+                    margin-bottom: 41px;
+                }
+
+			}
+
+            &.qodef-mg-rectangle-landscape,
+            &.qodef-mg-square-small {
+                .qodef-masonry-gallery-item-separator {
+                    margin-bottom: 12px;
+                    margin-top: 15px;
+                }
+                .qodef-masonry-gallery-item-text {
+                    margin-bottom: 18px;
+                }
+            }
+
+            .qodef-masonry-gallery-item-button {
+                border: 1px solid #fff;
+                background-color: #fff;
+                color: #2d2d2d;
+            }
+
+		}
+
+		&.qodef-mg-standard {
+
+            .qodef-masonry-gallery-item-content {
+                vertical-align: top;
+            }
+
+			.qodef-masonry-gallery-item-inner {
+
+				opacity: 0;
+				@include qodefTransition(opacity .25s ease, background-color .4s ease);
+
+				.qodef-masonry-gallery-item-title {
+					color: #fff;
+				}
+
+                .qodef-masonry-gallery-item-separator {
+                    display: inline-block;
+                    width: 27px;
+                    height: 2px;
+                    @include qodefBackgroundGradient($first-main-color, $second-main-color);
+                    margin-bottom: 3px;
+                    margin-top: 14px;
+                }
+
+                .qodef-masonry-gallery-item-text {
+                    color: #fff;
+                }
+
+				.qodef-masonry-gallery-read-more {
+					position: absolute;
+					bottom: 30px;
+					left: 36px;
+					color: #fff;
+					font-size: 12px;
+					font-weight: 700;
+					text-transform: uppercase;
+                    font-family: Raleway, sans-serif;
+					span {
+						display: inline-block;
+					    vertical-align: middle;
+					    margin-left: 8px;
+                        font-size: 24px;
+                        color: $second-main-color;
+					    -webkit-transition: -webkit-transform .3s ease;
+					    transition: transform .3s ease;
+                        position: relative;
+                        top: -2px;
+					}
+
+					&:hover span {
+					    @include qodefTransform(translateX(2px));
+					}
+
+				}
+
+			}
+
+			.qodef-blur-holder-outer {
+				position: absolute;
+				top:-5px;
+				left:-5px;
+				height: calc(100% + 10px);
+				width: calc(100% + 10px);
+				background-size: cover;
+				background-position: center;
+				@include qodefFilter(blur(5px));
+				z-index: -1;
+			}
+
+			&.qodef-mg-rectangle-portrait {
+				.qodef-blur-holder-outer {
+					background-position: calc(50% + 5px) center;
+				}
+			}
+
+			&.qodef-mg-rectangle-landscape {
+				.qodef-blur-holder-outer {
+					background-position: center calc(50% + 5px);
+				}
+			}
+
+			img {
+				@include qodefTransition(opacity .25s ease);
+				-webkit-backface-visibility:hidden;
+			}
+			&:hover {
+				.qodef-masonry-gallery-item-inner {
+					opacity: 1;
+					background-color: rgba(0,0,0,0.51);
+				}
+				img {
+					opacity: 0;
+					@include qodefTransition(opacity .6s ease);
+				}
+			}
+
+		}
+
+		.qodef-mg-item-link {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+
+	}
+
+}
+
+/* ==========================================================================
+   Masonry Gallery - end
+   ========================================================================== */

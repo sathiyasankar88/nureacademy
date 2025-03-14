@@ -1,0 +1,26 @@
+.qodef-header-vertical {
+
+    .qodef-logo-wrapper {
+        z-index: 100;
+        display: block;
+        position: relative;
+        text-align: inherit;
+        overflow: hidden;
+        height: 15%;
+
+        a {
+            display: block;
+            position: relative;
+            height: 100%;
+            padding-top: 5px;
+        }
+
+        img {
+            display: block;
+            height: auto;
+            max-height: 100%;
+            margin: 0 auto;
+            @include qodefTransition(opacity 0.3s ease);
+        }
+    }
+}

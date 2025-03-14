@@ -1,0 +1,30 @@
+/* ==========================================================================
+   WooCommerce Onsale and Out of Stock styles - begin
+   ========================================================================== */
+.woocommerce {
+
+    .qodef-onsale,
+    .qodef-out-of-stock {
+        position: absolute;
+        display: block;
+        top: 0;
+        right: 15px;
+        width: auto;
+        height: 36px;
+        color: #fff;
+        font-size: 13px;
+        line-height: 36px;
+        font-weight: 700;
+        padding: 0 20px;
+        margin: 0;
+        background-color: $second-main-color;
+        text-transform: uppercase;
+        text-align: center;
+        z-index: 100;
+        @include qodefTransform(translateZ(0));
+        @include qodefBoxSizing(border-box);
+    }
+}
+/* ==========================================================================
+   WooCommerce Onsale and Out of Stock styles - end
+   ========================================================================== */

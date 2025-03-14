@@ -1,0 +1,38 @@
+v1.1.8
+* Fixed Facebook Feed issue and updated Facebook APIs.
+
+v1.1.7
+* Fixed few bugs in the backend settings.
+
+v1.1.6
+* Added gutenberg based block.
+* Made Compatible with Wordpress Version 5.7
+
+v1.1.5
+* Fixed issue related to Tab icon and Tab Hover settings.
+
+v1.1.4
+* Fixed translation related issue.
+
+v1.1.3
+* General bug fixes and refinement in the code
+
+v1.1.2
+Issue fixed : Site experienced issue resolved.
+
+v1.1.1
+* Refinement : Few Frontend CSS refinement done.
+* Refinement: Few frontend JS refinement done.
+
+v1.1.0
+* Resolve the issue on hover for horizontal tab layout with bottom positions.
+
+v1.0.9
+Fixed Shortcode generator few JS issues
+Fixed Everest Tab Shortcode hidden on editor page resolved.
+
+v1.0.8
+1. Compatible with latest WP Version done
+2. Added new feature as short-code generator on plugin main settings page for Latest WordPress Version Compatibility.
+3. Issue related with switch to other tabs when clicked within a post via Everest Tab Short-code for WordPress Version less than 5.0 has been fixed.
+4. Made translation ready for how to use page and short-code details page.

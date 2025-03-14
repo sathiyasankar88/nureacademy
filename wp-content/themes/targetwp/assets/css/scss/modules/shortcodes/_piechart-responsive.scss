@@ -1,0 +1,27 @@
+@include ipad-landscape {
+  .qodef-pie-chart-doughnut-holder {
+    .qodef-pie-legend ul {
+      width: 35%;
+    }
+  }
+
+  .qodef-pie-chart-pie-holder {
+    .qodef-pie-legend ul {
+      width: 35%;
+    }
+  }
+}
+
+@include phone-portrait {
+  .qodef-pie-chart-doughnut-holder {
+    .qodef-pie-legend ul {
+      width: 70%;
+    }
+  }
+
+  .qodef-pie-chart-pie-holder {
+    .qodef-pie-legend ul {
+      width: 70%;
+    }
+  }
+}

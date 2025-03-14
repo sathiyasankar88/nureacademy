@@ -1,0 +1,39 @@
+
+@media only screen and (max-width: $ipad-landscape) {
+
+    .qodef-portfolio-single-holder.pinterest {
+
+        .qodef-portfolio-media {
+
+            .qodef-portfolio-single-media,
+            .qodef-single-masonry-grid-sizer{
+                width: 50%;
+            }
+        }
+    }
+
+}
+
+@media only screen and (max-width: $ipad-portrait) {
+
+    .qodef-portfolio-single-holder.pinterest {
+        .qodef-portfolio-content{
+            margin-bottom: 20px;
+        }
+    }
+}
+
+@media only screen and (max-width: $phone-landscape) {
+
+    .qodef-portfolio-single-holder.pinterest {
+
+        .qodef-portfolio-media {
+
+              .qodef-portfolio-single-media,
+              .qodef-single-masonry-grid-sizer {
+                   width: 100%;
+              }
+
+          }
+    }
+}

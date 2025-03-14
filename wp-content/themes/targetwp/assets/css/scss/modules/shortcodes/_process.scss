@@ -1,0 +1,195 @@
+@-webkit-keyframes slide-down {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(0);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(-50%);
+    }
+}
+
+@-moz-keyframes slide-down {
+    0% {
+        opacity: 0;
+        -moz-transform: translateY(0);
+    }
+    100% {
+        opacity: 1;
+        -moz-transform: translateY(-50%);
+    }
+}
+
+.qodef-process-holder {
+    .qodef-process-bg-holder {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 85%;
+        height: 100%;
+        z-index: -1;
+        opacity: 1;
+        @include qodefTransform(translateX(-50%));
+        &::after {
+            content: '';
+            position: absolute;
+            top: 80px;
+            left: 0;
+            height: 4px;
+            width: 100%;
+            background-image: radial-gradient(circle closest-side, #d2d2d2 99%, transparent 100%);
+            background-position: 49% 70%;
+            background-size: 23px 4px;
+            background-repeat: repeat-x;
+            display: block;
+        }
+    }
+    &.qodef-process-holder-items-three {
+        .qodef-process-bg-holder {
+            width: 56%;
+        }
+        .qodef-process-item-holder {
+            width: 33.33%;
+        }
+
+    }
+    &.qodef-process-holder-items-four {
+        .qodef-process-item-holder {
+            width: 25%;
+        }
+    }
+    &.qodef-process-holder-items-five {
+        .qodef-process-item-holder {
+            width: 20%;
+        }
+    }
+    .qodef-process-item-holder {
+        float: left;
+        .qodef-pi-icon-holder {
+            width: 152px;
+            height: 152px;
+            position: relative;
+            border: 2px solid transparent;
+            border-radius: 50%;
+            background: white;
+            background-clip: padding-box;
+            padding: 2px;
+            margin: 0 auto;
+            color: #232222;
+            &:before {
+                position: absolute;
+                top: -2px;
+                bottom: -2px;
+                left: -2px;
+                right: -2px;
+                background: $first-main-color;
+                content: '';
+                z-index: -1;
+                border-radius: 50%;
+                @include qodefTransition(opacity 0.2s ease-out);
+                opacity: 0;
+            }
+            &:after {
+                position: absolute;
+                top: -2px;
+                bottom: -2px;
+                left: -2px;
+                right: -2px;
+                background: linear-gradient($second-main-color, $first-main-color);
+                content: '';
+                z-index: -1;
+                border-radius: 50%;
+                @include qodefTransition(opacity 0.2s ease-out);
+                opacity: 1;
+            }
+            .qodef-pi-icon {
+                opacity: 1;
+                display: inline-block;
+                font-size: 28px;
+                top: 50%;
+                left: 50%;
+                position: relative;
+                @include qodefTransform(translate(-50%, -50%) scale(1));
+                @include qodefTransition(all 0.3s ease-out);
+                will-change: transform;
+            }
+            .qodef-pi-number {
+                opacity: 0;
+                font-size: 42px;
+                display: inline-block;
+                position: absolute;
+                text-align: center;
+                top: 50%;
+                left: 50%;
+                -webkit-transition: opacity 0.1s ease-out, -webkit-transform 0s ease-out .1s;
+                transition: opacity 0.1s ease-out, transform 0s ease-out .1s;
+                @include qodefTransform(translate(-50%, 100%));
+            }
+        }
+        .qodef-pi-title {
+            text-align: center;
+            margin-top: 32px;
+        }
+        .qodef-pi-text-holder {
+            text-align: center;
+            padding: 0 22px;
+        }
+
+        /* Hover effect */
+        &:hover {
+            .qodef-pi-icon-holder {
+                &:before {
+                    opacity: 1;
+                }
+                &:after {
+                    opacity: 0;
+                }
+                .qodef-pi-icon {
+                    opacity: 0;
+                    @include qodefTransform(translate(-50%, -50%) scale(.8));
+                    -webkit-transition: opacity 0.25s ease-out, transform 0.3s ease-out;
+                    transition: opacity 0.25s ease-out, transform 0.3s ease-out;
+                }
+                .qodef-pi-number {
+                    opacity: 1;
+                    @include qodefTransform(translate(-50%, -50%));
+                    -webkit-transition: opacity 0.2s ease-out 0.15s, -webkit-transform 0.4s cubic-bezier(.38,.76,0,.87) .2s;
+                    transition: opacity 0.2s ease-out 0.15s, transform 0.4s cubic-bezier(.38,.76,0,.87) .2s;
+                }
+            }
+        }
+    }
+
+    &.qodef-animate-process-items-yes {
+        visibility: hidden;
+
+        .touch & {
+            visibility: visible;
+        }
+
+        .no-touch & {
+            visibility: visible;
+
+            .qodef-process-item-holder {
+                opacity: 0;
+                @include qodefTransform(translate3d(0,60px,0));
+
+                &.qodef-appeared {
+                    opacity: 1;
+                    @include qodefTransform(translate3d(0,0,0));
+                    -webkit-transition: opacity .2s ease,-webkit-transform .4s cubic-bezier(.24,.58,.18,1.48);
+                    transition: opacity .2s ease,transform .4s cubic-bezier(.24,.58,.18,1.48);
+                }
+            }
+
+            .qodef-process-bg-holder {
+                opacity: 0;
+                
+                &.qodef-appeared {
+                    opacity: 1;
+                    @include qodefTransition(opacity .6s);
+                }
+            }
+        }
+    }
+}

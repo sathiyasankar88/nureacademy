@@ -1,0 +1,142 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-12 06:02+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/"
+
+#: includes/admin/class-et-register-post-types.php:81
+msgctxt "post type general name"
+msgid "Everest Tab"
+msgstr ""
+
+#: includes/admin/class-et-register-post-types.php:82
+msgctxt "post type singular name"
+msgid "Everest Tab"
+msgstr ""
+
+#: includes/admin/class-et-register-post-types.php:83
+msgctxt "admin menu"
+msgid "Everest Tab"
+msgstr ""
+
+#: includes/admin/class-et-register-post-types.php:84
+msgctxt "add new on admin bar"
+msgid "Everest Tab"
+msgstr ""
+
+#: includes/admin/class-et-register-post-types.php:85
+msgctxt "Everest Tab"
+msgid "Add New Tab"
+msgstr ""
+
+#: includes/admin/class-et-register-post-types.php:86
+msgid "Add New Tab"
+msgstr ""
+
+#: includes/admin/class-et-register-post-types.php:87
+msgid "New Everest Tab"
+msgstr ""
+
+#: includes/admin/class-et-register-post-types.php:88
+msgid "Edit Tab"
+msgstr ""
+
+#: includes/admin/class-et-register-post-types.php:89
+msgid "View Tab"
+msgstr ""
+
+#: includes/admin/class-et-register-post-types.php:90
+msgid "All Tabs"
+msgstr ""
+
+#: includes/admin/class-et-register-post-types.php:91
+msgid "Search Tab"
+msgstr ""
+
+#: includes/admin/class-et-register-post-types.php:92
+msgid "Parent Tab:"
+msgstr ""
+
+#: includes/admin/class-et-register-post-types.php:93
+msgid "No Tab found."
+msgstr ""
+
+#: includes/admin/class-et-register-post-types.php:94
+msgid "No Tab found in Trash."
+msgstr ""
+
+#: includes/admin/class-et-register-post-types.php:99
+msgid "Description."
+msgstr ""
+
+#: includes/admin/metabox/et-tab-shortcode.php:105
+msgid "Generate Custom Tab Shortcode."
+msgstr ""
+
+#: includes/admin/metabox/et-tab-shortcode.php:107
+msgid "Template"
+msgstr ""
+
+#: includes/admin/metabox/et-tab-shortcode.php:117
+msgid "Orientation"
+msgstr ""
+
+#: includes/admin/metabox/et-tab-shortcode.php:145
+msgid "No of Tab"
+msgstr ""
+
+#: includes/admin/metabox/et-tab-shortcode.php:151
+msgid "Event Trigger Type"
+msgstr ""
+
+#: includes/admin/metabox/et-tab-shortcode.php:160
+msgid "Tab Column"
+msgstr ""
+
+#: includes/admin/metabox/et-tab-shortcode.php:173
+msgid "Icon Position"
+msgstr ""
+
+#: includes/admin/metabox/et-tab-shortcode.php:183
+msgid "Tab Content Animation"
+msgstr ""
+
+#: includes/admin/metabox/et-tab-shortcode.php:209
+msgid "Cancel"
+msgstr ""
+
+#: includes/admin/pages/configuration_settings/et-shortcode-usage.php:32
+msgid "Shortcode Usage"
+msgstr ""
+
+#. Name of the plugin
+msgid "Everest Tab"
+msgstr ""
+
+#. Description of the plugin
+msgid ""
+"Multiple Tab Creation | Shortcode Integration | Order Tab With Drag & Drop "
+"Functionality | Fully Responsive"
+msgstr ""
+
+#. URI of the plugin
+msgid "https://accesspressthemes.com/wordpress-plugins/everest-tab/"
+msgstr ""
+
+#. Author of the plugin
+msgid "AccessPress Themes"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "http://accesspressthemes.com"
+msgstr ""

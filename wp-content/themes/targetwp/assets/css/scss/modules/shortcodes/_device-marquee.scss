@@ -1,0 +1,168 @@
+/* ==========================================================================
+# Device Marquee style - begin
+========================================================================== */
+.qodef-device-marquee {
+	position: relative;
+
+	%absolute-element {
+		position: absolute;
+		top:0;
+		left:0;
+		height: 100%;
+		width: 100%;
+	}
+	.qodef-screen-holder {
+		text-align: center;
+	}
+
+	.qodef-screen {
+		position: relative;
+		display: inline-block;
+	}
+
+	.qodef-desktop-image {
+		position: absolute;
+		height: 66%;
+		width: 91.6%;
+		top: 5%;
+		left: 4%;
+
+		> a {
+			@extend %absolute-element;
+			z-index: 100;
+
+			&:after {
+				content:'';
+				@extend %absolute-element;
+				background-color: rgba(255,255,255,.1);
+				opacity: 0;
+				@include qodefTransition(opacity .3s);
+			}
+
+			&:hover {
+				&:after {
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+	.qodef-bgrnd {
+		@extend %absolute-element;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+
+
+	&.qodef-background-image-set {
+		.qodef-background-images-holder {
+			position: absolute;
+			top:40%;
+			left:0;
+			@include qodefTransform(translateY(-50%));
+			z-index: -1;
+		}
+
+		&.qodef-infinite-scroll-effect {
+			.qodef-device-background-image {
+				position: relative;
+				max-width: 360%;
+
+				&.qodef-aux-background-image {
+					position: absolute;
+					top: 0;
+					left: 360%;
+				}
+			}
+		}
+
+		&:not(.qodef-infinite-scroll-effect) {
+			.qodef-aux-background-image { 
+				display: none;
+			}
+		}
+	}
+
+	&.qodef-blurred-background {
+		.qodef-device-background-image {
+			-webkit-filter:blur(3px);
+			filter:blur(3px);
+		}
+	}
+
+	&.qodef-device-appear-effect {
+		visibility: hidden;
+
+		.touch & {
+			visibility: visible;
+		}
+
+		.no-touch & {
+			visibility: visible;
+
+			.qodef-screen {
+				.qodef-bgrnd {
+					// -webkit-filter:blur(3px);
+					// filter:blur(3px);
+
+					&:after {
+						content: "";
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: 50%;
+						height: 200%;
+						@include qodefTransform(skew(-25deg) translateX(-200%));
+						background: rgba(255,255,255,.1);
+						background: linear-gradient(to right,rgba(255,255,255,.13) 0,rgba(255,255,255,.13) 77%,rgba(255,255,255,.55) 92%,rgba(255,255,255,0) 100%);
+						visibility: hidden;
+					}
+				}
+				@include qodefTransform(scale(.85));
+			}
+
+			&.qodef-appeared {
+				.qodef-screen {
+					.qodef-bgrnd {
+						position: relative;
+						overflow: hidden;
+						// -webkit-filter:none;
+						// filter:none;
+						// @include qodefTransition(all 1s);
+
+						&:after {
+							visibility: visible;
+							@include animation(qodeBling, 4s, 1, ease, .3s);
+
+							@include keyframes(qodeBling) {
+								0% {
+									left: 0%;
+									@include qodefTransform(skew(-25deg) translateX(-200%));
+									width: 50%;
+								}
+
+								20% {
+									width: 300%;
+									opacity:1;
+								}
+
+								100% {
+									left: 120%;
+									@include qodefTransform(skew(-25deg) translateX(0));
+									width: 10%;
+									opacity: 0;
+								}
+							}
+						}
+					}
+					@include qodefTransform(scale(1));
+					@include qodefTransition(all 1s cubic-bezier(0.86, 0, 0.07, 1.15) .15s);
+				}
+			}
+		}
+	}
+}
+
+/* ==========================================================================
+# Device Marquee style - end
+========================================================================== */

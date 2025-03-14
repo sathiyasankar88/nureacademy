@@ -1,0 +1,21 @@
+$block-menu-area-height: 90px;
+.qodef-header-block {
+    .qodef-page-header {
+        margin-top: 30px;
+        .qodef-menu-area {
+            height: $block-menu-area-height;
+            .qodef-logo-wrapper a {
+                max-height: $block-menu-area-height*0.9;
+            }
+
+            .qodef-vertical-align-containers {
+                background-color: #fff;
+                padding: 0 46px;
+                .qodef-position-right-inner{
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
+

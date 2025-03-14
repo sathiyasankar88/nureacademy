@@ -1,0 +1,25 @@
+/* ==========================================================================
+# Device Marquee responsive style - begin
+========================================================================== */
+
+@media only screen and (max-width: $ipad-landscape) {
+	.qodef-device-marquee {
+		.qodef-screen {
+			max-width: 80%;
+		}
+
+		&.qodef-background-image-set {
+			.qodef-background-images-holder {
+				left:-50%;
+			}
+
+			.qodef-aux-background-image { 
+				display: none;
+			}
+		}
+	}
+}
+
+/* ==========================================================================
+# Device Marquee responsive style - end
+========================================================================== */

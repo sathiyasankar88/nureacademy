@@ -1,0 +1,138 @@
+/* ==========================================================================
+   WooCommerce Pagination styles - begin
+   ========================================================================== */
+.qodef-woo-pagination-holder {
+    @include qodefRelativeHolderLayout();
+    margin: 0 0 26px;
+    clear: both;
+    @include qodefBoxShadow();
+    height: 39px;
+
+    .qodef-woo-pagination-inner {
+        position: relative;
+        display: table;
+        width: 100%;
+        text-align: right;
+    }
+}
+
+.woocommerce-pagination {
+    position: relative;
+    display: table-cell;
+    vertical-align: top;
+    width: 99%;
+    margin: 0;
+    padding: 0;
+
+    .page-numbers {
+        position: relative;
+        display: inline-block;
+        line-height: 39px;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+
+        li {
+            display: inline-block;
+            vertical-align: top;
+
+            a,
+            > span {
+                position: relative;
+                display: inline-block;
+                vertical-align: middle;
+                text-decoration: none;
+                cursor: pointer;
+                white-space: nowrap;
+                font-size: 12px;
+                font-weight: 300;
+                color: #444;
+                margin: 0 10px;
+                width: auto;
+
+                &.current {
+                    color: #bdbdbd;
+                    &:after {
+                        border-color: #bdbdbd;
+                    }
+                }
+            }
+
+            a {
+                height: 100%;
+                &:hover {
+                    color: #bdbdbd;
+                    &:after {
+                        border-color: #bdbdbd;
+                    }
+                }
+                &.next,
+                &.prev {
+                    position: absolute;
+                    top: 0;
+                    margin: 0;
+                    .qodef-pagination-text {
+                        color: #444444;
+                        font-size: 12px;
+                        font-weight: 300;
+                        line-height: 39px;
+                        vertical-align: middle;
+                        text-transform: uppercase;
+                    }
+                    .qodef-pagination-arrow {
+                        color: $second-main-color;
+                        font-size: 15px;
+                        width: 39px;
+                        height: 39px;
+                        line-height: 39px;
+                        position: absolute;
+                    }
+                    &:hover {
+                        color: initial;
+                        &:after {
+                            border-color: transparent;
+                        }
+                    }
+                }
+                &.next {
+                    right: 0;
+                    .qodef-pagination-arrow {
+                        right: 0;
+                        border-left:1px solid #ededed;
+                    }
+                    .qodef-pagination-text{
+                        margin-right: 52px;
+                    }
+                }
+                &.prev {
+                    left: 0;
+                    .qodef-pagination-arrow {
+                        left: 0;
+                        border-right:1px solid #ededed;
+
+                    }
+                    .qodef-pagination-text{
+                        margin-left: 52px;
+                    }
+                }
+
+                &.prev,
+                &.next{
+                    .qodef-pagination-text{
+                        @include qodefTransition(color .1s ease-in-out);
+                    }
+                    &:hover {
+                        .qodef-pagination-text {
+                            color: $second-main-color;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
+/* ==========================================================================
+   WooCommerce Pagination styles - end
+   ========================================================================== */

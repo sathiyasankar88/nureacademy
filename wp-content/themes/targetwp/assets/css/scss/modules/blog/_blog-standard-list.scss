@@ -1,0 +1,59 @@
+.qodef-blog-holder.qodef-blog-type-standard{
+	article{
+		.qodef-post-image > a,
+		.owl-item > div > a{
+			display: block;
+			position: relative;
+
+			&:after {
+				content:'';
+				position: absolute;
+				top:0;
+				left:0;
+				height: 100%;
+				width: 100%;
+				background-color: rgba(0,0,0,.1);
+				opacity: 0;
+				@include qodefTransition(opacity .4s);
+			}
+
+			&:hover {
+				&:after {
+					opacity: 1;
+				}
+			}
+		}
+		.qodef-post-title a {
+			font-family: Raleway, sans-serif;
+			font-size: 26px;
+			line-height: 38px;
+		}
+		.qodef-post-info.qodef-section-bottom {
+			.qodef-section-bottom-left {
+				.qodef-list li {
+					a span {
+						color: #444444;
+					}
+					&:hover {
+						a span {
+							color: $second-main-color;
+						}
+					}
+				}
+				.qodef-blog-share {
+					.qodef-social-share-holder.qodef-list li {
+						margin-right: 9px;
+					}
+				}
+			}
+		}
+
+
+		&.format-quote,
+		&.format-link {
+			.qodef-social-share-holder.qodef-list li {
+				margin-right: 11px;
+			}
+		}
+	}
+}

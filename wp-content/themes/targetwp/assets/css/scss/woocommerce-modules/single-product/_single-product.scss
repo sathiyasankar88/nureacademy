@@ -1,0 +1,568 @@
+/* ==========================================================================
+   WooCommerce Single Product Page styles - begin
+   ========================================================================== */
+.qodef-woo-single-page {
+
+    .product {
+        @include qodefRelativeHolderLayout();
+        float: none;
+        max-width: 100%;
+        margin: 0 0 20px;
+
+        .qodef-single-product-content {
+            @include qodefRelativeHolderLayout();
+            margin: 0 0 30px;
+            clear: both;
+        }
+
+        .images {
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+            width: 51%;
+            margin: 0;
+            padding: 0 24px 0 0;
+            float: left;
+            @include qodefBoxSizing(border-box);
+
+            figure {
+                margin: 0;
+
+                a {
+                    @include qodefRelativeHolderLayout();
+
+                    img {
+                        display: block;
+                    }
+                }
+
+            }
+
+            .woocommerce-product-gallery__trigger {
+                position: absolute;
+                top: 10px;
+                right: 39px;
+                width: 30px;
+                height: 30px;
+                line-height: 30px;
+                text-align: center;
+                z-index: 10;
+            }
+
+            .woocommerce-product-gallery__image {
+                position: relative;
+                display: inline-block;
+                vertical-align: top;
+                margin: 0;
+                padding: 0 10px;
+                box-sizing: border-box;
+
+                &:first-child {
+                    left: 10px;
+                    width: calc(100% - 20px);
+                    padding: 0;
+                }
+
+                .zoomImg {
+                    cursor: crosshair;
+                }
+            }
+
+            &.woocommerce-product-gallery--with-images {
+
+                .woocommerce-product-gallery__image {
+
+                    &:not(:first-child) {
+                        float: left;
+                        padding-top: 20px;
+                    }
+                }
+            }
+
+            $thumb_3_columns_label: ('columns-2', 'columns-3', 'columns-4');
+            @for $i from 0 to length($thumb_3_columns_label) {
+                &.woocommerce-product-gallery--#{nth($thumb_3_columns_label, $i+1)} {
+                    $column_width: 100%/($i+2);
+
+                    .woocommerce-product-gallery__image {
+
+                        &:not(:first-child) {
+                            width: $column_width;
+                        }
+                    }
+                }
+            }
+
+
+        }
+
+        .qodef-single-product-summary {
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+            width: 49%;
+            padding: 0 0 0 24px;
+            float: left;
+            @include qodefBoxSizing(border-box);
+        }
+
+        .single_add_to_cart_button {
+
+        }
+
+        &.product-type-external {
+            .single_add_to_cart_button {
+                margin-top: 19px;
+            }
+        }
+    }
+
+    .woocommerce-tabs {
+        @include qodefRelativeHolderLayout();
+        margin: 52px 0 0;
+
+        h2 {
+            font-size: 14px;
+            font-weight: 600;
+            margin: 16px 0 13px;
+            display: none;
+        }
+
+        ul.tabs {
+            @include qodefRelativeHolderLayout();
+            list-style: none;
+            margin: 0;
+            padding: 0;            
+            clear: both;
+            border-bottom: 1px solid #dadada;
+
+            > li {
+                position: relative;
+                display: inline-block;
+                vertical-align: middle;                
+                float: left;
+                top: 1px; /* For overlapping parent border bottom */
+                box-sizing: border-box;
+
+                a {
+                    position: relative;
+                    display: block;
+                    padding: 16px 37px 16px 49px;
+                    color: #444444;
+                    font-weight: 300;
+                    font-size: 12px;
+                    border-top:1px solid #dadada;
+                    border-right:1px solid #dadada;
+                    text-transform: uppercase;
+                    @include qodefBoxSizing(border-box);
+                    @include qodefTransition(color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out);
+                    &:before{
+                        content: '';
+                        position: absolute;
+                        @include qodefBackgroundGradient($first-main-color,$second-main-color);
+                        top:-3px;
+                        height: 3px;
+                        width: calc(100% + 2px);
+                        left: -1px;
+                        opacity: 0;
+                        @include qodefTransition(opacity .1s linear);
+                    }
+                }
+
+                &:hover,
+                &.active {
+
+                    a {
+                        &:before{
+                            opacity: 1;
+                        }
+                    }
+                }
+
+                &:first-child{
+                    a{
+                        border-left: 1px solid #dadada;
+                    }
+                }
+
+                &.description_tab,
+                &.additional_information_tab,
+                &.reviews_tab{
+                    &:before{
+                        position: absolute;
+                        font-size: 18px;
+                        font-family: Linearicons-Free;
+                        color:$first-main-color;
+                        line-height: 62px;
+                        left: 22px;
+                    }
+                }
+                &.description_tab{
+                    &:before {
+                        content: '\e845';
+                    }
+                }
+                &.additional_information_tab{
+                    &:before {
+                        content: '\e842';
+                    }
+                }
+                &.reviews_tab{
+                    &:before {
+                        content: '\e84c';
+                    }
+                }
+            }
+        }
+
+        .entry-content {
+            padding: 18px 0;
+        }
+        
+        table {
+            margin: 0 0 20px;
+
+            tr, th {
+                border: 0;
+            }
+
+            td, th {
+                padding: 3px 0;
+                vertical-align: middle;
+                text-align: left;
+            }
+
+            th {
+                color: $default-heading-color;
+                font-weight: 400;
+                width: 1%;
+                padding: 0 10px 0 0;
+            }
+
+            td {
+                width: 99%;
+            }
+        }
+
+        #reviews {
+
+            ol.commentlist {
+                list-style: none;
+
+	            li {
+		            padding-top: 10px;
+
+		            &:first-child {
+			            padding: 0;
+		            }
+	            }
+
+                .comment_container {
+                    @include qodefRelativeHolderLayout();
+
+                    img {
+                        float: left;
+                        width: 60px;
+                    }
+
+                    .comment-text {
+                        padding: 0 0 0 80px;
+
+                        .star-rating {
+                            margin: 0;
+                        }
+
+                        p {
+	                        display: block;
+	                        margin: 5px 0 0;
+                        }
+                    }
+                }
+            }
+
+            .comment-respond {
+                margin-top: 15px;
+
+                .comment-reply-title {
+                    margin: 0 0 10px;
+                    font-size: 14px;
+                    font-weight: 600;
+                }
+
+                .stars {
+                    height: 13px;
+                    margin: 0;
+                }
+
+                .comment-form-rating .stars span {
+                    width: 75px;
+                    height: 13px;
+                    position: relative;
+                    float: left;
+
+                    &:after {
+                        content: "\e031\e031\e031\e031\e031";
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        font-family: 'ElegantIcons';
+                        color: #444;
+                        font-size: 13px;
+                    }
+
+                    a {
+                        float: left;
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        width: 13px;
+                        height: 0;
+                        padding-top: 23px;
+                        overflow: hidden;
+
+                        &:after {
+                            content: "";
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            font-family: 'ElegantIcons';
+                            color: #444;
+                            font-size: 13px;
+                            opacity: 0;
+                            z-index: 1;
+                            -webkit-transition: opacity 0.15s ease-out;
+                            transition: opacity 0.15s ease-out;
+                        }
+                    }
+
+                    a.star-1 {
+                        width: 13px;
+                        z-index: 10;
+                        &:after {
+                            content: "\e033";
+                        }
+                        &.active:after,
+                        &:hover:after,
+                        &:focus:after {
+                            opacity: 1;
+                        }
+                    }
+                    a.star-2 {
+                        width: 26px;
+                        z-index: 9;
+                        &:after {
+                            content: "\e033\e033";
+                        }
+                        &.active:after,
+                        &:hover:after,
+                        &:focus:after {
+                            opacity: 1;
+                        }
+                    }
+                    a.star-3 {
+                        width: 39px;
+                        z-index: 8;
+                        &:after {
+                            content: "\e033\e033\e033";
+                        }
+                        &.active:after,
+                        &:hover:after,
+                        &:focus:after {
+                            opacity: 1;
+                        }
+                    }
+                    a.star-4 {
+                        width: 52px;
+                        z-index: 7;
+                        &:after {
+                            content: "\e033\e033\e033\e033";
+                        }
+                        &.active:after,
+                        &:hover:after,
+                        &:focus:after {
+                            opacity: 1;
+                        }
+                    }
+                    a.star-5 {
+                        width: 65px;
+                        z-index: 6;
+                        &:after {
+                            content: "\e033\e033\e033\e033\e033";
+                        }
+                        &.active:after,
+                        &:hover:after,
+                        &:focus:after {
+                            opacity: 1;
+                        }
+                    }
+                }
+
+	            .comment-form-comment label {
+		            display: block;
+		            margin: 0 0 10px;
+	            }
+            }
+        }
+    }
+
+    .related.products,
+    .upsells.products {
+
+	    > h2 {
+		    display: block;
+            margin: 0 0 28px;
+            font-size: 20px;
+            font-weight: 300;
+	    }
+    }
+
+	.related.products {
+		margin: 78px 0 10px;
+	}
+
+	.upsells.products {
+		margin: 12px 0 40px;
+		border-bottom: 1px solid #dadada;
+	}
+}
+
+.qodef-single-product-summary {
+
+    .qodef-single-product-title {
+        display: block;
+        margin: 0;
+	    line-height: 1.1em;
+    }
+
+    .woocommerce-product-rating {
+        @include qodefRelativeHolderLayout();
+        line-height: 1;
+        margin: 16px 0 22px;
+
+	    .woocommerce-review-link {
+		    display: none;
+		    vertical-align: middle;
+	    }
+    }
+
+    .price {
+        position: relative;
+        display: block;
+        font-size: 22px;
+        line-height: 1;
+        font-weight: 700;
+        margin: 0;
+        color: #444;
+        border-top: 1px solid #dadada;
+        padding: 21px 0 0;
+
+        * {
+            font-size: inherit;
+            line-height: inherit;
+        }
+
+        del {
+            color: #bebebe;
+            font-size: 18px;
+            font-weight: 400;
+	        margin: 0 20px 0 0;
+        }
+
+        ins {
+            text-decoration: none;
+        }
+    }
+
+    div[itemprop="description"] p {
+        @include qodefRelativeHolderLayout();
+        margin: 26px 0 0;
+    }
+
+    form.cart {
+        @include qodefRelativeHolderLayout();
+        margin: 29px 0 0;
+
+        .qodef-quantity-buttons {
+            margin: 0 26px 0 0;
+            @include qodefBoxShadow;
+        }
+    }
+
+    .product_meta {
+        margin: 29px 0 0;
+
+        > span {
+            display: block;
+            margin: 2px 0;
+            color: #444;
+            font-size: 12px;
+            font-weight: 300;
+            letter-spacing: 0.75px;
+            text-transform: uppercase;
+
+	        * {
+		        font-weight: 300;
+	        }
+
+            .sku {
+                color: #909090;
+            }
+
+            a {
+                color: #909090;
+
+                &:hover {
+                    color: $first-main-color;
+                }
+            }
+        }
+        .sku_wrapper {
+            color:#444444;
+
+        }
+        .posted_in {
+
+        }
+        .tagged_as {
+
+        }
+    }
+
+    .qodef-woo-social-share-holder {
+        @include qodefRelativeHolderLayout();
+        margin: 21px 0 0;
+
+        > * {
+            display: table-cell;
+            vertical-align: top;
+        }
+
+        .qodef-list li{
+            margin-right: 27px;
+            a{
+                span {
+                    color: #444444;
+                    font-weight: 400;
+                    font-size: 15px;
+                    @include qodefTransition(color .1s ease-in-out);
+                }
+
+                &:hover{
+                    span{
+                        color:$first-main-color;
+                    }
+                }
+            }
+        }
+    }
+
+    p.stock.out-of-stock,
+    p.stock.in-stock {
+        color: #444;
+        font-weight: 600;
+        margin: 18px 0 0;
+    }
+}
+/* ==========================================================================
+   WooCommerce Single Product Page styles - end
+   ========================================================================== */

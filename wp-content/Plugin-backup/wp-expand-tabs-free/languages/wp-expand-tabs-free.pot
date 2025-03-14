@@ -1,0 +1,1167 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WP Tabs 2.1.5\n"
+"POT-Creation-Date: 2022-02-04 18:00+0600\n"
+"PO-Revision-Date: 2022-02-04 18:00+0600\n"
+"Last-Translator: \n"
+"Language-Team: ShapedPlugin <support@shapedplugin.com>\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.0.1\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_x;esc_html__;esc_html_e;esc_html_x;esc_attr__;"
+"esc_attr_e;esc_attr_x\n"
+"X-Poedit-SearchPath-0: admin\n"
+"X-Poedit-SearchPath-1: deprecated\n"
+"X-Poedit-SearchPath-2: includes\n"
+"X-Poedit-SearchPath-3: index.php\n"
+"X-Poedit-SearchPath-4: languages\n"
+"X-Poedit-SearchPath-5: plugin-main.php\n"
+"X-Poedit-SearchPath-6: public\n"
+"X-Poedit-SearchPath-7: readme.txt\n"
+"X-Poedit-SearchPath-8: uninstall.php\n"
+
+#: admin/class-wp-tabs-admin.php:100
+msgid "No tabs to duplicate has been supplied!"
+msgstr ""
+
+#: admin/class-wp-tabs-admin.php:117
+msgid "No shortcode to duplicate has been supplied!"
+msgstr ""
+
+#: admin/class-wp-tabs-admin.php:181
+msgid "Tabs creation failed, could not find original tabs: "
+msgstr ""
+
+#: admin/class-wp-tabs-admin.php:195
+msgid "Duplicate"
+msgstr ""
+
+#: admin/partials/class-wp-tabs-help.php:29
+#: admin/partials/class-wp-tabs-help.php:30
+msgid "Help"
+msgstr ""
+
+#: admin/partials/class-wp-tabs-premium.php:29
+#: admin/partials/class-wp-tabs-premium.php:30
+msgid "Premium"
+msgstr ""
+
+#: admin/partials/class-wp-tabs-premium.php:63
+msgid "No data found!"
+msgstr ""
+
+#: admin/partials/class-wp-tabs-premium.php:85
+msgid "Upgrade To WP Tabs Pro"
+msgstr ""
+
+#: admin/partials/class-wp-tabs-premium.php:87
+msgid ""
+"A highly flexible and customizable WordPress tabs plugin designed for "
+"everyone including designers & developers."
+msgstr ""
+
+#: admin/partials/class-wp-tabs-premium.php:88
+msgid ""
+"The WP Tabs Pro plugin has plenty of incredible features like different "
+"layouts, Vertical tabs, Horizontal tabs, 10+ Tabs positions, Deep-linking, "
+"Multi-level or Nested, Flat tabs, Tabs title with subtitle icon, CSS "
+"Transitions, and 16 Animation effects, 940+ Google fonts, 100+ Essential "
+"options and much more."
+msgstr ""
+
+#: admin/partials/class-wp-tabs-premium.php:89
+msgid ""
+"You can also create tabs from existing WordPress posts, pages, taxonomy, and "
+"much more."
+msgstr ""
+
+#: admin/partials/class-wp-tabs-widget.php:22
+msgid "Create and display tabs"
+msgstr ""
+
+#: admin/partials/class-wp-tabs-widget.php:74
+msgid "Title:"
+msgstr ""
+
+#: admin/partials/class-wp-tabs-widget.php:78
+msgid "Tab Groups:"
+msgstr ""
+
+#: admin/partials/metabox-config.php:30
+msgid "Live Preview"
+msgstr ""
+
+#: admin/partials/metabox-config.php:53 includes/class-wp-tabs-cpt.php:82
+msgid "WP Tabs"
+msgstr ""
+
+#: admin/partials/metabox-config.php:76
+msgid "Tabs Type"
+msgstr ""
+
+#: admin/partials/metabox-config.php:79
+msgid "Content"
+msgstr ""
+
+#: admin/partials/metabox-config.php:80
+msgid "Post"
+msgstr ""
+
+#: admin/partials/metabox-config.php:88
+msgid "Tabs Content"
+msgstr ""
+
+#: admin/partials/metabox-config.php:89
+msgid "Add New Tab"
+msgstr ""
+
+#: admin/partials/metabox-config.php:91
+msgid "Tab :"
+msgstr ""
+
+#: admin/partials/metabox-config.php:99
+msgid "Title"
+msgstr ""
+
+#: admin/partials/metabox-config.php:106
+msgid "Subtitle (Pro)"
+msgstr ""
+
+#: admin/partials/metabox-config.php:114
+msgid "Font Icon"
+msgstr ""
+
+#: admin/partials/metabox-config.php:118
+msgid "Or"
+msgstr ""
+
+#: admin/partials/metabox-config.php:126
+msgid "Custom Icon"
+msgstr ""
+
+#: admin/partials/metabox-config.php:132 admin/partials/metabox-config.php:762
+msgid "Description"
+msgstr ""
+
+#: admin/partials/metabox-config.php:154
+msgid "Shortcode Section"
+msgstr ""
+
+#: admin/partials/metabox-config.php:167
+msgid "Tabs Settings"
+msgstr ""
+
+#: admin/partials/metabox-config.php:174
+msgid "Tabs Layout"
+msgstr ""
+
+#: admin/partials/metabox-config.php:175
+msgid "Choose a tabs layout."
+msgstr ""
+
+#: admin/partials/metabox-config.php:176
+msgid ""
+"To unlock Vertical and more settings, <a href=\"https://shapedplugin.com/"
+"plugin/wp-tabs-pro/?ref=1\"  target=\"_blank\"><b>Upgrade To Pro!</b></a>"
+msgstr ""
+
+#: admin/partials/metabox-config.php:180
+msgid "Horizontal"
+msgstr ""
+
+#: admin/partials/metabox-config.php:184
+msgid "Vertical"
+msgstr ""
+
+#: admin/partials/metabox-config.php:195
+msgid "Tabs Position"
+msgstr ""
+
+#: admin/partials/metabox-config.php:196
+msgid "Select tabs position."
+msgstr ""
+
+#: admin/partials/metabox-config.php:198 admin/partials/metabox-config.php:401
+msgid "Top"
+msgstr ""
+
+#: admin/partials/metabox-config.php:199
+msgid "Bottom (Pro)"
+msgstr ""
+
+#: admin/partials/metabox-config.php:207
+msgid "Tabs Alignment"
+msgstr ""
+
+#: admin/partials/metabox-config.php:208
+msgid "Select an alignment for tabs."
+msgstr ""
+
+#: admin/partials/metabox-config.php:210 admin/partials/metabox-config.php:400
+#: admin/partials/models/fields/typography/typography.php:218
+msgid "Left"
+msgstr ""
+
+#: admin/partials/metabox-config.php:211 admin/partials/metabox-config.php:402
+#: admin/partials/models/fields/typography/typography.php:220
+msgid "Right"
+msgstr ""
+
+#: admin/partials/metabox-config.php:212
+#: admin/partials/models/fields/typography/typography.php:219
+msgid "Center"
+msgstr ""
+
+#: admin/partials/metabox-config.php:213
+msgid "Justified"
+msgstr ""
+
+#: admin/partials/metabox-config.php:221
+msgid "Activator Event"
+msgstr ""
+
+#: admin/partials/metabox-config.php:222
+msgid "Select an activator event for tabs."
+msgstr ""
+
+#: admin/partials/metabox-config.php:224
+msgid "On Click"
+msgstr ""
+
+#: admin/partials/metabox-config.php:225
+msgid "Mouseover"
+msgstr ""
+
+#: admin/partials/metabox-config.php:226
+msgid "AutoPlay (Pro)"
+msgstr ""
+
+#: admin/partials/metabox-config.php:234
+msgid "Make Tab Opened"
+msgstr ""
+
+#: admin/partials/metabox-config.php:235
+msgid "The position of the tab opened. Default 1st opened."
+msgstr ""
+
+#: admin/partials/metabox-config.php:243
+msgid "Preloader"
+msgstr ""
+
+#: admin/partials/metabox-config.php:244
+msgid "Tabs will be hidden until page load completed."
+msgstr ""
+
+#: admin/partials/metabox-config.php:245 admin/partials/metabox-config.php:615
+msgid "Enabled"
+msgstr ""
+
+#: admin/partials/metabox-config.php:246 admin/partials/metabox-config.php:616
+msgid "Disabled"
+msgstr ""
+
+#: admin/partials/metabox-config.php:260
+msgid "Display Options"
+msgstr ""
+
+#: admin/partials/metabox-config.php:266
+msgid "Tabs Set Section Title"
+msgstr ""
+
+#: admin/partials/metabox-config.php:267
+msgid "Show/hide tabs set section title."
+msgstr ""
+
+#: admin/partials/metabox-config.php:269 admin/partials/metabox-config.php:325
+#: admin/partials/metabox-config.php:509
+msgid "Show"
+msgstr ""
+
+#: admin/partials/metabox-config.php:270 admin/partials/metabox-config.php:326
+#: admin/partials/metabox-config.php:510
+msgid "Hide"
+msgstr ""
+
+#: admin/partials/metabox-config.php:276
+msgid "Margin Bottom from Section Title"
+msgstr ""
+
+#: admin/partials/metabox-config.php:277
+msgid "Set a margin bottom from section title. Default value is 30px."
+msgstr ""
+
+#: admin/partials/metabox-config.php:296
+msgid "Margin Between Tabs"
+msgstr ""
+
+#: admin/partials/metabox-config.php:297
+msgid "Set a space between tabs."
+msgstr ""
+
+#: admin/partials/metabox-config.php:311 admin/partials/metabox-config.php:322
+msgid "Tabs Icon"
+msgstr ""
+
+#: admin/partials/metabox-config.php:316
+msgid ""
+"To unlock the following Tabs Icon options, <a href=\"https://shapedplugin."
+"com/plugin/wp-tabs-pro/?ref=1\" target=\"_blank\"><b>Upgrade To Pro!</b></a>"
+msgstr ""
+
+#: admin/partials/metabox-config.php:323
+msgid "Show/hide the tabs icon."
+msgstr ""
+
+#: admin/partials/metabox-config.php:333
+msgid "Icon Size"
+msgstr ""
+
+#: admin/partials/metabox-config.php:334
+msgid "Set tabs icon size."
+msgstr ""
+
+#: admin/partials/metabox-config.php:354
+msgid "Space Between Title and Icon"
+msgstr ""
+
+#: admin/partials/metabox-config.php:355
+msgid "Set space between title and icon."
+msgstr ""
+
+#: admin/partials/metabox-config.php:375
+msgid "Icon Color"
+msgstr ""
+
+#: admin/partials/metabox-config.php:376
+msgid "Set tab icon color."
+msgstr ""
+
+#: admin/partials/metabox-config.php:378
+msgid "Color"
+msgstr ""
+
+#: admin/partials/metabox-config.php:379
+msgid "Active Color"
+msgstr ""
+
+#: admin/partials/metabox-config.php:380
+msgid "Hover Color"
+msgstr ""
+
+#: admin/partials/metabox-config.php:397
+msgid "Icon Position"
+msgstr ""
+
+#: admin/partials/metabox-config.php:398
+msgid "Select tab icon position."
+msgstr ""
+
+#: admin/partials/metabox-config.php:415
+msgid "Tabs Title and Description"
+msgstr ""
+
+#: admin/partials/metabox-config.php:420
+msgid "Title HTML Tag"
+msgstr ""
+
+#: admin/partials/metabox-config.php:421
+msgid "Select a tag for tabs title."
+msgstr ""
+
+#: admin/partials/metabox-config.php:436
+msgid "Title Background Color"
+msgstr ""
+
+#: admin/partials/metabox-config.php:437
+msgid "Set tabs title background color."
+msgstr ""
+
+#: admin/partials/metabox-config.php:439
+msgid "Background"
+msgstr ""
+
+#: admin/partials/metabox-config.php:440
+msgid "Active Background"
+msgstr ""
+
+#: admin/partials/metabox-config.php:441
+msgid "Hover Background"
+msgstr ""
+
+#: admin/partials/metabox-config.php:452
+msgid "Title Padding"
+msgstr ""
+
+#: admin/partials/metabox-config.php:453
+msgid "Set tabs title padding."
+msgstr ""
+
+#: admin/partials/metabox-config.php:465
+msgid "Border"
+msgstr ""
+
+#: admin/partials/metabox-config.php:466
+msgid "Set tabs border."
+msgstr ""
+
+#: admin/partials/metabox-config.php:477
+msgid "Border Radius"
+msgstr ""
+
+#: admin/partials/metabox-config.php:478
+msgid "Set tabs border radius."
+msgstr ""
+
+#: admin/partials/metabox-config.php:498
+msgid "Top Line For Active Tab"
+msgstr ""
+
+#: admin/partials/metabox-config.php:499
+msgid "Check to make a top line for active tab."
+msgstr ""
+
+#: admin/partials/metabox-config.php:506 admin/partials/metabox-config.php:730
+msgid "Tabs Subtitle"
+msgstr ""
+
+#: admin/partials/metabox-config.php:507
+msgid "Show/hide tabs subtitle."
+msgstr ""
+
+#: admin/partials/metabox-config.php:516
+msgid "Description Background Color"
+msgstr ""
+
+#: admin/partials/metabox-config.php:517
+msgid "Set description background color."
+msgstr ""
+
+#: admin/partials/metabox-config.php:523
+msgid "Description Padding"
+msgstr ""
+
+#: admin/partials/metabox-config.php:524
+msgid "Set description padding."
+msgstr ""
+
+#: admin/partials/metabox-config.php:536
+msgid "Description Border"
+msgstr ""
+
+#: admin/partials/metabox-config.php:537
+msgid "Set description border."
+msgstr ""
+
+#: admin/partials/metabox-config.php:550
+msgid "Make Tabs Flat Style"
+msgstr ""
+
+#: admin/partials/metabox-config.php:551
+msgid "Check to make tabs flat style."
+msgstr ""
+
+#: admin/partials/metabox-config.php:558
+msgid "Content Height"
+msgstr ""
+
+#: admin/partials/metabox-config.php:559
+msgid "Select content height."
+msgstr ""
+
+#: admin/partials/metabox-config.php:561
+msgid "Auto"
+msgstr ""
+
+#: admin/partials/metabox-config.php:562
+msgid "Custom"
+msgstr ""
+
+#: admin/partials/metabox-config.php:569
+msgid ""
+"To unlock the more settings for <b>Tabs Title and Description</b>, <a href="
+"\"//shapedplugin.com/plugin/wp-tabs-pro/?ref=1\" target=\"_blank"
+"\"><b>Upgrade To Pro!</b></a>"
+msgstr ""
+
+#: admin/partials/metabox-config.php:573
+msgid "Small Screen"
+msgstr ""
+
+#: admin/partials/metabox-config.php:578
+msgid "When screen width is less than"
+msgstr ""
+
+#: admin/partials/metabox-config.php:592
+msgid "Tabs Mode on Small Screen"
+msgstr ""
+
+#: admin/partials/metabox-config.php:593
+msgid "Choose a tabs mode on small screen."
+msgstr ""
+
+#: admin/partials/metabox-config.php:595
+msgid "Full Width"
+msgstr ""
+
+#: admin/partials/metabox-config.php:596
+msgid "Accordion"
+msgstr ""
+
+#: admin/partials/metabox-config.php:602 admin/partials/metabox-config.php:613
+msgid "Animation"
+msgstr ""
+
+#: admin/partials/metabox-config.php:607
+msgid ""
+"To unlock the following Tabs Animation settings, <a href=\"//shapedplugin."
+"com/plugin/wp-tabs-pro/?ref=1\" target=\"_blank\"><b>Upgrade To Pro!</b></a>"
+msgstr ""
+
+#: admin/partials/metabox-config.php:614
+msgid "Enable/Disable animation for tabs content."
+msgstr ""
+
+#: admin/partials/metabox-config.php:624
+msgid "Animation Style"
+msgstr ""
+
+#: admin/partials/metabox-config.php:625
+msgid "Choose an animation style for tabs content."
+msgstr ""
+
+#: admin/partials/metabox-config.php:627
+msgid "fadeIn"
+msgstr ""
+
+#: admin/partials/metabox-config.php:635
+msgid "Transition Delay"
+msgstr ""
+
+#: admin/partials/metabox-config.php:636
+msgid "Set animation transition delay in milisecond."
+msgstr ""
+
+#: admin/partials/metabox-config.php:652
+msgid "Typography"
+msgstr ""
+
+#: admin/partials/metabox-config.php:659
+msgid ""
+"To unlock These Typography (940+ Google Fonts) options, <a href=\"https://"
+"shapedplugin.com/plugin/wp-tabs-pro/?ref=1\" target=\"_blank\"><b>Upgrade To "
+"Pro</b></a>! P.S. Note: The color fields work in the lite version."
+msgstr ""
+
+#: admin/partials/metabox-config.php:664
+msgid "Load Tabs Section Title Font"
+msgstr ""
+
+#: admin/partials/metabox-config.php:665
+msgid "On/Off google font for the section title."
+msgstr ""
+
+#: admin/partials/metabox-config.php:671
+msgid "Tabs Section Title"
+msgstr ""
+
+#: admin/partials/metabox-config.php:672
+msgid "Set tabs section title font properties."
+msgstr ""
+
+#: admin/partials/metabox-config.php:691
+msgid "Load Tabs Title Font"
+msgstr ""
+
+#: admin/partials/metabox-config.php:692
+msgid "On/Off google font for the tabs title."
+msgstr ""
+
+#: admin/partials/metabox-config.php:698
+msgid "Tabs Title"
+msgstr ""
+
+#: admin/partials/metabox-config.php:699
+msgid "Set tabs title font properties."
+msgstr ""
+
+#: admin/partials/metabox-config.php:723
+msgid "Load Subtitle Font"
+msgstr ""
+
+#: admin/partials/metabox-config.php:724
+msgid "On/Off google font for the tabs subtitle."
+msgstr ""
+
+#: admin/partials/metabox-config.php:731
+msgid "Set tabs subtitle font properties."
+msgstr ""
+
+#: admin/partials/metabox-config.php:755
+msgid "Load Description Font"
+msgstr ""
+
+#: admin/partials/metabox-config.php:756
+msgid "On/Off google font for the tabs description."
+msgstr ""
+
+#: admin/partials/metabox-config.php:763
+msgid "Set description font properties."
+msgstr ""
+
+#: admin/partials/models/classes/metabox.class.php:341
+#: admin/partials/models/classes/options.class.php:815
+msgid "No option provided by developer."
+msgstr ""
+
+#: admin/partials/models/classes/metabox.class.php:361
+msgid "Restore"
+msgstr ""
+
+#: admin/partials/models/classes/metabox.class.php:362
+msgid "update post for restore "
+msgstr ""
+
+#: admin/partials/models/classes/metabox.class.php:362
+msgid "Cancel"
+msgstr ""
+
+#: admin/partials/models/classes/options.class.php:329
+msgid "Error while saving."
+msgstr ""
+
+#: admin/partials/models/classes/options.class.php:409
+msgid "Success. Imported backup options."
+msgstr ""
+
+#: admin/partials/models/classes/options.class.php:421
+msgid "Default options restored."
+msgstr ""
+
+#: admin/partials/models/classes/options.class.php:436
+msgid "Default options restored for only this section."
+msgstr ""
+
+#: admin/partials/models/classes/options.class.php:502
+msgid "Settings saved."
+msgstr ""
+
+#: admin/partials/models/classes/options.class.php:709
+msgid "show all options"
+msgstr ""
+
+#: admin/partials/models/classes/options.class.php:711
+msgid "Search option(s)"
+msgstr ""
+
+#: admin/partials/models/classes/options.class.php:714
+msgid "Save Settings"
+msgstr ""
+
+#: admin/partials/models/classes/options.class.php:714
+msgid "Saving..."
+msgstr ""
+
+#: admin/partials/models/classes/options.class.php:715
+msgid "Reset Tab"
+msgstr ""
+
+#: admin/partials/models/classes/options.class.php:715
+msgid "Are you sure to reset all the settings of this tab?"
+msgstr ""
+
+#: admin/partials/models/classes/options.class.php:716
+msgid "Reset All"
+msgstr ""
+
+#: admin/partials/models/classes/options.class.php:716
+msgid "Are you sure to reset all options?"
+msgstr ""
+
+#: admin/partials/models/classes/setup.class.php:401
+msgid "Are you sure?"
+msgstr ""
+
+#: admin/partials/models/classes/setup.class.php:402
+msgid "Restoring options."
+msgstr ""
+
+#: admin/partials/models/classes/setup.class.php:403
+msgid "Importing options."
+msgstr ""
+
+#: admin/partials/models/classes/setup.class.php:406
+#, php-format
+msgid "Please enter %s or more characters"
+msgstr ""
+
+#: admin/partials/models/classes/setup.class.php:407
+msgid "Searching..."
+msgstr ""
+
+#: admin/partials/models/classes/setup.class.php:408
+msgid "No results match"
+msgstr ""
+
+#: admin/partials/models/classes/setup.class.php:490
+#, php-format
+msgid "Ooops! This field type (%s) can not be used here, yet."
+msgstr ""
+
+#: admin/partials/models/classes/setup.class.php:561
+msgid "This field class is not available!"
+msgstr ""
+
+#: admin/partials/models/classes/setup.class.php:564
+msgid "This type is not found!"
+msgstr ""
+
+#: admin/partials/models/fields/border/border.php:53
+#: admin/partials/models/fields/spacing/spacing.php:53
+msgid "top"
+msgstr ""
+
+#: admin/partials/models/fields/border/border.php:54
+#: admin/partials/models/fields/spacing/spacing.php:54
+msgid "right"
+msgstr ""
+
+#: admin/partials/models/fields/border/border.php:55
+#: admin/partials/models/fields/spacing/spacing.php:55
+msgid "bottom"
+msgstr ""
+
+#: admin/partials/models/fields/border/border.php:56
+#: admin/partials/models/fields/spacing/spacing.php:56
+msgid "left"
+msgstr ""
+
+#: admin/partials/models/fields/border/border.php:57
+#: admin/partials/models/fields/spacing/spacing.php:57
+msgid "all"
+msgstr ""
+
+#: admin/partials/models/fields/border/border.php:80
+#: admin/partials/models/fields/typography/typography.php:276
+msgid "Solid"
+msgstr ""
+
+#: admin/partials/models/fields/border/border.php:81
+#: admin/partials/models/fields/typography/typography.php:279
+msgid "Dashed"
+msgstr ""
+
+#: admin/partials/models/fields/border/border.php:82
+#: admin/partials/models/fields/typography/typography.php:278
+msgid "Dotted"
+msgstr ""
+
+#: admin/partials/models/fields/border/border.php:83
+#: admin/partials/models/fields/typography/typography.php:277
+msgid "Double"
+msgstr ""
+
+#: admin/partials/models/fields/border/border.php:84
+msgid "Inset"
+msgstr ""
+
+#: admin/partials/models/fields/border/border.php:85
+msgid "Outset"
+msgstr ""
+
+#: admin/partials/models/fields/border/border.php:86
+msgid "Groove"
+msgstr ""
+
+#: admin/partials/models/fields/border/border.php:87
+msgid "ridge"
+msgstr ""
+
+#: admin/partials/models/fields/border/border.php:88
+#: admin/partials/models/fields/typography/typography.php:256
+#: admin/partials/models/fields/typography/typography.php:275
+msgid "None"
+msgstr ""
+
+#: admin/partials/models/fields/button_set/button_set.php:87
+#: admin/partials/models/fields/checkbox/checkbox.php:94
+#: admin/partials/models/fields/radio/radio.php:93
+#: admin/partials/models/fields/select/select.php:142
+msgid "No data provided for this option type."
+msgstr ""
+
+#: admin/partials/models/fields/group/group.php:51
+#: includes/class-wp-tabs-cpt.php:73
+msgid "Add New"
+msgstr ""
+
+#: admin/partials/models/fields/group/group.php:64
+msgid "Error: Nested field id can not be same with another nested field id."
+msgstr ""
+
+#: admin/partials/models/fields/group/group.php:76
+#: admin/partials/models/fields/group/group.php:117
+msgid "Are you sure to delete this item?"
+msgstr ""
+
+#: admin/partials/models/fields/group/group.php:151
+msgid "You can not add more than"
+msgstr ""
+
+#: admin/partials/models/fields/group/group.php:152
+msgid "You can not remove less than"
+msgstr ""
+
+#: admin/partials/models/fields/media/media.php:53
+msgid "Upload"
+msgstr ""
+
+#: admin/partials/models/fields/media/media.php:54
+msgid "Remove"
+msgstr ""
+
+#: admin/partials/models/fields/media/media.php:88
+msgid "No media selected"
+msgstr ""
+
+#: admin/partials/models/fields/switcher/switcher.php:46
+msgid "On"
+msgstr ""
+
+#: admin/partials/models/fields/switcher/switcher.php:47
+msgid "Off"
+msgstr ""
+
+#: admin/partials/models/fields/textarea/textarea.php:70
+msgid "Add Shortcode"
+msgstr ""
+
+#: admin/partials/models/fields/typography/typography.php:129
+msgid "Font Family"
+msgstr ""
+
+#: admin/partials/models/fields/typography/typography.php:131
+msgid "Select a font"
+msgstr ""
+
+#: admin/partials/models/fields/typography/typography.php:139
+msgid "Backup Font Family"
+msgstr ""
+
+#: admin/partials/models/fields/typography/typography.php:160
+#: admin/partials/models/fields/typography/typography.php:175
+#: admin/partials/models/fields/typography/typography.php:188
+#: admin/partials/models/fields/typography/typography.php:205
+#: admin/partials/models/fields/typography/typography.php:225
+#: admin/partials/models/fields/typography/typography.php:243
+#: admin/partials/models/fields/typography/typography.php:262
+#: admin/partials/models/fields/typography/typography.php:285
+msgid "Default"
+msgstr ""
+
+#: admin/partials/models/fields/typography/typography.php:172
+msgid "Font Style"
+msgstr ""
+
+#: admin/partials/models/fields/typography/typography.php:187
+#: admin/partials/models/fields/typography/typography.php:188
+msgid "Load Extra Styles"
+msgstr ""
+
+#: admin/partials/models/fields/typography/typography.php:202
+msgid "Subset"
+msgstr ""
+
+#: admin/partials/models/fields/typography/typography.php:213
+msgid "Text Align"
+msgstr ""
+
+#: admin/partials/models/fields/typography/typography.php:217
+msgid "Inherit"
+msgstr ""
+
+#: admin/partials/models/fields/typography/typography.php:221
+msgid "Justify"
+msgstr ""
+
+#: admin/partials/models/fields/typography/typography.php:222
+msgid "Initial"
+msgstr ""
+
+#: admin/partials/models/fields/typography/typography.php:234
+msgid "Font Variant"
+msgstr ""
+
+#: admin/partials/models/fields/typography/typography.php:238
+msgid "Normal"
+msgstr ""
+
+#: admin/partials/models/fields/typography/typography.php:239
+msgid "Small Caps"
+msgstr ""
+
+#: admin/partials/models/fields/typography/typography.php:240
+msgid "All Small Caps"
+msgstr ""
+
+#: admin/partials/models/fields/typography/typography.php:252
+msgid "Text Transform"
+msgstr ""
+
+#: admin/partials/models/fields/typography/typography.php:257
+msgid "Capitalize"
+msgstr ""
+
+#: admin/partials/models/fields/typography/typography.php:258
+msgid "Uppercase"
+msgstr ""
+
+#: admin/partials/models/fields/typography/typography.php:259
+msgid "Lowercase"
+msgstr ""
+
+#: admin/partials/models/fields/typography/typography.php:271
+msgid "Text Decoration"
+msgstr ""
+
+#: admin/partials/models/fields/typography/typography.php:280
+msgid "Wavy"
+msgstr ""
+
+#: admin/partials/models/fields/typography/typography.php:281
+msgid "Overline"
+msgstr ""
+
+#: admin/partials/models/fields/typography/typography.php:282
+msgid "Line-through"
+msgstr ""
+
+#: admin/partials/models/fields/typography/typography.php:298
+msgid "Font Size"
+msgstr ""
+
+#: admin/partials/models/fields/typography/typography.php:310
+msgid "Line Height"
+msgstr ""
+
+#: admin/partials/models/fields/typography/typography.php:322
+msgid "Letter Spacing"
+msgstr ""
+
+#: admin/partials/models/fields/typography/typography.php:334
+msgid "Word Spacing"
+msgstr ""
+
+#: admin/partials/models/fields/typography/typography.php:350
+msgid "Font Color"
+msgstr ""
+
+#: admin/partials/models/fields/typography/typography.php:362
+msgid "Font Hover Color"
+msgstr ""
+
+#: admin/partials/models/fields/typography/typography.php:374
+msgid "Font Active Color"
+msgstr ""
+
+#: admin/partials/models/fields/typography/typography.php:389
+msgid "Custom Style"
+msgstr ""
+
+#: admin/partials/models/fields/typography/typography.php:471
+msgid "Custom Web Fonts"
+msgstr ""
+
+#: admin/partials/models/fields/typography/typography.php:477
+msgid "Safe Web Fonts"
+msgstr ""
+
+#: admin/partials/models/fields/typography/typography.php:500
+msgid "Google Web Fonts"
+msgstr ""
+
+#: admin/partials/models/functions/actions.php:20
+msgid "Error: Nonce verification has failed. Please try again."
+msgstr ""
+
+#: admin/partials/models/functions/actions.php:24
+msgid "Error: Missing request arguments."
+msgstr ""
+
+#: admin/partials/models/functions/actions.php:30
+msgid "You do not have required permissions to access."
+msgstr ""
+
+#: admin/partials/models/functions/validate.php:15
+#: admin/partials/models/functions/validate.php:89
+msgid "Please write a valid email address!"
+msgstr ""
+
+#: admin/partials/models/functions/validate.php:33
+#: admin/partials/models/functions/validate.php:112
+msgid "Please write a numeric data!"
+msgstr ""
+
+#: admin/partials/models/functions/validate.php:51
+#: admin/partials/models/functions/validate.php:134
+msgid "Error! This field is required!"
+msgstr ""
+
+#: admin/partials/models/functions/validate.php:69
+#: admin/partials/models/functions/validate.php:156
+msgid "Please write a valid url!"
+msgstr ""
+
+#: admin/partials/option-config.php:26 admin/partials/option-config.php:38
+msgid "Settings"
+msgstr ""
+
+#: admin/partials/option-config.php:50
+msgid "Advanced Settings"
+msgstr ""
+
+#: admin/partials/option-config.php:56
+msgid "Clean-up Data on Deletion"
+msgstr ""
+
+#: admin/partials/option-config.php:57
+msgid ""
+"Check this box if you would like WP Tabs to completely remove all of its "
+"data when the plugin is deleted."
+msgstr ""
+
+#: admin/partials/option-config.php:71
+msgid "Additional CSS"
+msgstr ""
+
+#: admin/partials/option-config.php:77
+msgid "Custom CSS"
+msgstr ""
+
+#: admin/partials/tools-config.php:25 admin/partials/tools-config.php:37
+msgid "Tools"
+msgstr ""
+
+#: admin/partials/tools-config.php:45
+msgid "Export"
+msgstr ""
+
+#: admin/partials/tools-config.php:52
+msgid "Choose What To Export"
+msgstr ""
+
+#: admin/partials/tools-config.php:55
+msgid "All Tab Groups"
+msgstr ""
+
+#: admin/partials/tools-config.php:56
+msgid "Selected Tab Group(s)"
+msgstr ""
+
+#: admin/partials/tools-config.php:69
+msgid "Choose group(s)"
+msgstr ""
+
+#: admin/partials/tools-config.php:90
+msgid "Import"
+msgstr ""
+
+#: admin/partials/tools-config.php:96
+msgid "Import JSON File To Upload"
+msgstr ""
+
+#: includes/class-wp-tabs-admin-menu.php:67
+msgid "Add Tab Group"
+msgstr ""
+
+#: includes/class-wp-tabs-admin-menu.php:69
+msgid "Go Premium!"
+msgstr ""
+
+#: includes/class-wp-tabs-cpt.php:71 includes/class-wp-tabs-cpt.php:83
+msgid "Tab Groups"
+msgstr ""
+
+#: includes/class-wp-tabs-cpt.php:72
+msgid "Tabs"
+msgstr ""
+
+#: includes/class-wp-tabs-cpt.php:74
+msgid "Add New Tab Group"
+msgstr ""
+
+#: includes/class-wp-tabs-cpt.php:75
+msgid "Edit Tab Group"
+msgstr ""
+
+#: includes/class-wp-tabs-cpt.php:76
+msgid "New Tab Group"
+msgstr ""
+
+#: includes/class-wp-tabs-cpt.php:77
+msgid "View Tab Group"
+msgstr ""
+
+#: includes/class-wp-tabs-cpt.php:78
+msgid "Search Tabs"
+msgstr ""
+
+#: includes/class-wp-tabs-cpt.php:79
+msgid "No Tab Group found."
+msgstr ""
+
+#: includes/class-wp-tabs-cpt.php:80
+msgid "No Tab Group found in trash."
+msgstr ""
+
+#: includes/class-wp-tabs-cpt.php:81
+msgid "Parent Item:"
+msgstr ""
+
+#: includes/class-wp-tabs-cpt.php:136
+msgid "Tabs updated."
+msgstr ""
+
+#: includes/class-wp-tabs-cpt.php:139
+msgid " updated."
+msgstr ""
+
+#: includes/class-wp-tabs-cpt.php:141
+msgid "Tabs published."
+msgstr ""
+
+#: includes/class-wp-tabs-cpt.php:142
+msgid "Tabs saved."
+msgstr ""
+
+#: includes/class-wp-tabs-cpt.php:143
+msgid "Tabs submitted."
+msgstr ""
+
+#: includes/class-wp-tabs-cpt.php:144
+msgid "M j, Y @ G:i"
+msgstr ""
+
+#: includes/class-wp-tabs-cpt.php:145
+msgid "Tabs draft updated."
+msgstr ""
+
+#: includes/class-wp-tabs-cpt.php:159
+msgid "Name"
+msgstr ""
+
+#: includes/class-wp-tabs-cpt.php:160
+msgid "Shortcode"
+msgstr ""
+
+#: includes/class-wp-tabs-cpt.php:161
+msgid "Date"
+msgstr ""
+
+#: includes/class-wp-tabs-import-export.php:170
+msgid "Nothing to import."
+msgstr ""

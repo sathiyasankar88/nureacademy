@@ -1,0 +1,70 @@
+/* ==========================================================================
+# Portfolio Pinterest - begin
+========================================================================== */
+
+.qodef-portfolio-single-holder.pinterest{
+
+    .qodef-portfolio-content{
+      margin-bottom:0;
+    }
+
+    .qodef-portfolio-info-holder{
+        float:left;
+        width:50%;
+    }
+
+    .qodef-portfolio-social-holder{
+        float:right;
+        text-align:right;
+        width:50%;
+    }
+
+    .qodef-portfolio-social{
+        margin:110px 0 0 0;
+    }
+
+    .qodef-pinterest-gallery-holder{
+        padding: 70px 0 0 0;
+        margin: 30px 0 0 0;
+        border-top: 1px solid #dadada;
+    }
+
+    .qodef-portfolio-media {
+        opacity: 0;
+        @include qodefTransition(opacity 0.15s ease-out);
+        width: calc(100% + 32px);
+        margin: -16px;
+
+        &.qodef-appeared{
+            opacity: 1;
+        }
+
+        .qodef-portfolio-single-media {
+                width: 33.33%;
+                padding: 16px;
+                box-sizing:border-box;
+
+                a,
+                img {
+                  display: block;
+                }
+
+                img {
+                    width:100%;
+                }
+            }
+
+            .qodef-single-masonry-grid-sizer {
+                width: 33.33%;
+            }
+
+      }
+
+
+}
+
+
+
+/* ==========================================================================
+# Portfolio Pinterest - end
+========================================================================== */

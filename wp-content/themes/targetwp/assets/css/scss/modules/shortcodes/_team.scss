@@ -1,0 +1,240 @@
+/* ==========================================================================
+# Team style - begin
+========================================================================== */
+
+.touch .qodef-team .qodef-team-social-holder {
+	cursor: pointer;
+}
+
+.qodef-team{
+
+	p{
+		margin:0;
+	}
+
+	.qodef-team-social-wrapp{
+		margin: 20px 0 0 0;
+
+		.qodef-icon-shortcode{
+			font-size:14px;
+			margin:0 10px;
+			&:hover {
+				.qodef-icon-element {
+					color: $second-main-color;
+				}
+			}
+		}
+
+		.qodef-icon-shortcode .qodef-icon-element{
+			color: #444444;
+		}
+
+		.qodef-icon-shortcode.circle,
+		.qodef-icon-shortcode.square{
+			border: 1px solid #dbdbdb;
+			width:25px;
+			height:25px;
+			line-height:25px;
+			font-size:10px;
+		}
+	}
+
+
+/* Team type main info below image - begin
+========================================================================== */
+
+	&.main-info-below-image {
+
+		.qodef-team-image {
+			overflow: hidden;
+			padding: 0;
+			margin:0 0 28px 0;
+			position: relative;
+
+			img{
+				display:block;
+			}
+
+			.qodef-team-image-overlay {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				opacity: 0;
+				background-color: rgba(0,0,0,0.5);
+				@include qodefTransition(opacity 0.3s ease-in-out);
+			}
+			span {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				width: 28px;
+				border-bottom: 3px solid transparent;
+				@include  qodefBorderGradient($first-main-color, $second-main-color);
+				@include qodefTransform(translate(-14px,-14px));
+				opacity: 0;
+				-webkit-transition: opacity 0.4s ease-out;
+				-ms-transition: opacity 0.4s ease-out;
+				transition: opacity 0.4s ease-out;
+			}
+		}
+
+		.qodef-team-info {
+			text-align:center;
+
+			.qodef-team-name {
+				color:#444444;
+			}
+
+			.q_team_position {
+				font-weight:100;
+				font-size: 12px;
+				margin-top:3px;
+			}
+
+			.qodef-separator {
+				margin:19px 0 12px 0;
+				width:13px;
+				border-bottom-width: 3px;
+				border-bottom-style: solid;
+				@include qodefBorderGradient($first-main-color, $second-main-color);
+			}
+
+		}
+
+		&:hover {
+			.qodef-team-image-overlay {
+				opacity: 1;
+				span {
+					opacity: 1;
+				}
+			}
+		}
+
+	}
+
+/* Team type main info below image - end
+========================================================================== */
+
+
+/* Team type main info on hover - begin
+========================================================================== */
+
+	&.main-info-on-hover{
+		.qodef-team-image {
+			overflow: hidden;
+			position:relative;
+			
+			img{
+				display:block;
+				-webkit-transform-origin:50% 100%;
+				transform-origin:50% 100%;
+				@include qodefTransition(all .25s);
+				will-change:transform;
+			}
+
+			&:hover {
+				.qodef-team-social-inner {
+			    	@include qodefTransition(all .5s cubic-bezier(.38,.76,0,.87));
+				    @include qodefTransform(translate3d(0,0,0));
+				}
+
+				img {
+			        @include qodefTransform(scale(1.05));
+				}
+			}
+		}
+
+
+
+		.qodef-team-description {
+			display: table;
+			width: 100%;
+			height: 100%;
+		}
+
+		.qodef-team-text {
+			padding: 20px 0 0 0;
+			text-align:center;
+		}
+
+		.qodef-team-social-holder {
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			left:0;
+			top: 0;
+			opacity: 0;
+			filter: alpha(opacity=0);
+			display:table-cell;
+			vertical-align: middle;
+			@include qodefTransition(opacity 0.15s ease-out, background-color 0.15s ease-out);
+			@include qodefTransform(translateZ(0px));
+
+			&:after {
+			    content:'';
+			    position: absolute;
+			    top:0;
+			    left:0;
+			    height:100%;
+			    width: 100%;
+			    background-color:rgba(0, 0, 0, 0.5);
+			    z-index:-1;
+			}
+
+			.qodef-team-social {
+				display: table;
+				width: 100%;
+				height: 100%;
+			}
+
+
+			.qodef-team-social-inner {
+				display: table-cell;
+				vertical-align: middle;
+				text-align: center;
+				position: relative;
+				@include qodefTransform(translate3d(0,-40px,0));  
+				-webkit-transition: opacity .2s, -webkit-transform 0s .2s; 
+				transition: opacity .2s, transform 0s .2s; 
+
+				.qodef-team-title-holder {
+					.qodef-separator {
+						border-bottom: 2px solid transparent;
+						@include qodefBorderGradient($first-main-color,$second-main-color);
+						width: 28px;
+					}
+					h5,h6 {
+						color: #ffffff;
+					}
+				}
+				.qodef-team-social-wrapp  {
+					i {
+						color: #ffffff;
+					}
+					.qodef-icon-shortcode:hover {
+						i {
+							color: $second-main-color!important;
+						}
+					}
+				}
+			}
+		}
+
+		&:hover {
+			.qodef-team-social-holder{
+				opacity: 1;
+				filter: alpha(opacity=100);
+			}
+		}
+
+	}
+}
+/* Team type main info on hover - end
+========================================================================== */
+
+
+/* ==========================================================================
+# Team style - end
+========================================================================== */

@@ -1,0 +1,117 @@
+$top-bar-height: 50px;
+
+.qodef-top-bar {
+    width: 100%;
+    background-color: #fff;
+    color: #707070;
+	position: relative;
+    font-weight: 300;
+    height: $top-bar-height;
+	z-index: 111;
+	@include qodefBoxSizing(border-box);
+	padding: 0 39px;
+
+  .qodef-vertical-align-containers {
+    padding: 0;
+  }
+
+
+  .widget {
+    font-size: 11px;
+    display: inline-block;
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  .qodef-position-left {
+    .widget {
+      margin-left: 28px;
+      padding-left: 17px;
+      border-left: 1px solid #dcdcdc;
+      line-height: 15px;
+      &:first-child {
+        margin-left: 0;
+        padding-left: 0;
+        border: 0;
+      }
+    }
+
+  }
+
+  .qodef-position-right {
+    .qodef-top-bar-widget {
+      &:last-child {
+        margin-left: 12px;
+      }
+
+      &:first-child {
+        border-right: 1px solid #dcdcdc;
+        padding-right: 17px;
+        line-height: 15px;
+      }
+    }
+
+  }
+
+    .qodef-grid {
+        height: 100%;
+
+        .qodef-vertical-align-containers {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+    .qodef-logo-wrapper a {
+        max-height: $top-bar-height;
+    }
+
+    .qodef-position-center {
+
+        p {
+            font-size: 13px;
+            color: #c99e66;
+        }
+    }
+
+}
+
+.qodef-light-header .qodef-top-bar {
+	color: $header-top-light-color !important; //Beacause of inline color styles
+
+	.widget {
+		color: $header-top-light-color !important; //Beacause of inline color styles
+
+
+		p,
+		a,
+		.widgettitle {
+			color: $header-top-light-color !important; //Beacause of inline color styles
+
+		}
+
+	}
+}
+
+.qodef-dark-header .qodef-top-bar {
+	background-color:  $header-top-dark-background-color!important;
+	color: $header-top-dark-color !important; //Beacause of inline color styles
+
+	.widget {
+		color: $header-top-dark-color !important; //Beacause of inline color styles
+
+		p,
+		a,
+		.widgettitle {
+			color: $header-top-dark-color !important; //Beacause of inline color styles
+		}
+
+	}
+}
+
+.qodef-top-border-enabled {
+  .qodef-top-bar {
+      border-bottom: 2px solid transparent;
+      @include qodefBorderGradient($first-main-color, $second-main-color);
+  }
+}

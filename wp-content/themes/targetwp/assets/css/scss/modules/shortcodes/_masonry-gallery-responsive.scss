@@ -1,0 +1,73 @@
+/* ==========================================================================
+# Masonry Gallery Responsive - start
+========================================================================== */
+@include ipad-landscape {
+	.qodef-masonry-gallery-holder {
+		.qodef-masonry-gallery-grid-sizer,
+		.qodef-masonry-gallery-item {
+			width: 50%;
+		}
+		.qodef-masonry-gallery-item {
+			&.qodef-mg-square-big,
+			&.qodef-mg-rectangle-landscape {
+				width: 100%;
+			}
+		}
+	}
+
+}
+
+@include phone-landscape {
+
+	.qodef-masonry-gallery-holder {
+		.qodef-masonry-gallery-grid-sizer,
+		.qodef-masonry-gallery-item {
+			width: 100%;
+		}
+
+		.qodef-masonry-gallery-item.qodef-mg-square-big{
+			.qodef-masonry-gallery-item-title{
+				font-size: 30px;
+			}
+
+			.qodef-masonry-gallery-item-text{
+				display: none;
+			}
+		}
+
+		.qodef-masonry-gallery-item.qodef-mg-rectangle-landscape{
+			.qodef-masonry-gallery-item-content{
+				padding: 5px 28px;
+                    .qodef-masonry-gallery-item-icon {
+                        margin-bottom: 0;
+                        font-size: 24px;
+                    }
+			}
+
+			.qodef-masonry-gallery-item-inner .qodef-masonry-gallery-read-more{
+				bottom: 12px;
+			}
+
+            &.qodef-mg-standard {
+                .qodef-masonry-gallery-read-more {
+                    display: none;
+                }
+            }
+		}
+
+	}
+}
+
+@include phone-portrait {
+	.qodef-masonry-gallery-holder {
+		.qodef-mg-with-button {
+			.qodef-masonry-gallery-item-inner .qodef-masonry-gallery-item-separator {
+				display: block!important;
+			}
+		}
+	}
+}
+
+/* ==========================================================================
+# Masonry Gallery Responsive - end
+========================================================================== */

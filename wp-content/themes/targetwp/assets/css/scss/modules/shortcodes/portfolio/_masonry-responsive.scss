@@ -1,0 +1,36 @@
+
+@media only screen and (max-width: $ipad-landscape){
+    .qodef-ptf-masonry{
+        .qodef-portfolio-list-holder {
+            .qodef-portfolio-list-masonry-grid-sizer,
+            .qodef-default-masonry-item,
+            .qodef-large-height-masonry-item {
+                width: 50%;
+            }
+
+            .qodef-large-width-masonry-item,
+            .qodef-large-width-height-masonry-item {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: $phone-landscape){
+    .qodef-ptf-masonry{
+        .qodef-portfolio-list-holder {
+            margin: 0;
+            width: 100%;
+            article{
+                margin-bottom:20px;
+                padding:0px;
+            }
+            article,
+            .qodef-portfolio-list-masonry-grid-sizer {
+                width: 100% !important;
+            }
+        }
+    }
+}
+
+

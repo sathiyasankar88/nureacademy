@@ -1,0 +1,92 @@
+/* ==========================================================================
+   WooCommerce Single Product Page Responsive styles - begin
+   ========================================================================== */
+@include mac-landscape {
+    .qodef-woo-single-page {
+        .woocommerce-tabs ul.tabs > li {
+            width: 100%;
+            &:nth-child(2),
+            &:nth-child(3){
+                border-left: 1px solid #dadada;
+            }
+        }
+    }
+}
+
+
+@include ipad-landscape {
+
+    .qodef-woo-single-page {
+
+        .product {
+
+            .images,
+            .qodef-single-product-summary {
+                float: none;
+                width: 100%;
+                padding: 0;
+            }
+
+            .qodef-single-product-summary {
+                margin: 35px 0 0;
+            }
+        }
+    }
+}
+
+@include phone-landscape {
+
+    .qodef-woo-single-page {
+
+        .product {
+
+            .images {
+
+                .thumbnails {
+
+                    &.columns-2 {
+
+                        a {
+                            float: none;
+                            width: 100%;
+                        }
+                    }
+
+                    &.columns-4 {
+
+                        a {
+                            width: 50%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include phone-portrait {
+
+    .qodef-woo-single-page {
+
+        .woocommerce-tabs {
+	        margin: 34px 0 0;
+
+            ul.tabs {
+
+                > li {
+                    float: none;
+                    width: 100%;
+                    padding:  0;
+
+                    a {
+                        display: block;
+                        border: 1px solid #dadada;
+                    }
+                }
+            }
+        }
+    }
+}
+/* ==========================================================================
+   WooCommerce Single Product Page Responsive styles - end
+   ========================================================================== */
